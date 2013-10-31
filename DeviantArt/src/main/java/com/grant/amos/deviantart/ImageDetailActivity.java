@@ -3,17 +3,20 @@ package com.grant.amos.deviantart;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.grant.amos.util.WebViewImageHTML;
 
 public class ImageDetailActivity extends Activity {
 
     ImageData imageData = null;
 
-    AsyncImageView imageView;
+    WebView imageView;
     TextView usernameTextView;
     TextView titleTextView;
-    AsyncImageView userIconImageView;
+    WebView userIconImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,18 +42,15 @@ public class ImageDetailActivity extends Activity {
     }
 
     public void setupViews(){
-        imageView = (AsyncImageView) findViewById(R.id.detail_image_view);
-        userIconImageView = (AsyncImageView) findViewById(R.id.user_icon_image_view);
+        imageView = (WebView) findViewById(R.id.detail_image_view);
+        userIconImageView = (WebView) findViewById(R.id.user_icon_image_view);
         usernameTextView = (TextView) findViewById(R.id.username);
         titleTextView = (TextView) findViewById(R.id.title);
 
-        imageView.setURL(imageData.thumbURL);
-        imageView.downloadImage();
-
-        if(imageData.imageURL != null){
-            imageView.setURL(imageData.imageURL);
-            imageView.downloadImage();
-        }
+        String urlToLoad = imageData.imageURL != null ? imageData.imageURL : imageData.thumbURL;
+        imageView.loadData(WebViewImageHTML.GetHTMLWithImageURL(urlToLoad), "text/html", "utf-8");
+        imageView.getSettings().setSupportZoom(true);
+        imageView.getSettings().setBuiltInZoomControls(true);
 
         if(imageData.title != null)
             titleTextView.setText(imageData.title);
@@ -59,8 +59,7 @@ public class ImageDetailActivity extends Activity {
             usernameTextView.setText(imageData.username);
 
         if(imageData.userIcon != null){
-            userIconImageView.setURL(imageData.userIcon);
-            userIconImageView.downloadImage();
+            userIconImageView.loadData(WebViewImageHTML.GetHTMLWithImageURL(imageData.userIcon), "text/html", "utf-8");
         }
     }
     

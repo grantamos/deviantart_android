@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.grant.amos.util.ImageCache;
+import com.grant.amos.util.WebViewImageHTML;
 
 /**
  * Created by Grant on 6/24/13.
@@ -20,7 +20,7 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         setupViews();
-        ImageCache.init();
+        WebViewImageHTML.Init(getApplicationContext());
     }
 
     public void setupViews(){

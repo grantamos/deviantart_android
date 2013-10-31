@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-v11\styles.xml -->
+    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values-v11/styles.xml -->
+    <eat-comment />
+
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>

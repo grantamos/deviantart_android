@@ -6,6 +6,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -83,7 +84,7 @@ public class BrowseActivity extends Activity {
         browseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ImageView thumbView = ((BrowseListAdapter.ViewHolder) view.getTag()).imageView;
+                WebView thumbView = ((BrowseListAdapter.ViewHolder) view.getTag()).imageWebView;
 
                 Intent imageDetailIntent = new Intent(getBaseContext(), ImageDetailActivity.class);
                 ImageData imageData = (ImageData) adapterView.getItemAtPosition(i);

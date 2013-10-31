@@ -41,6 +41,13 @@
         android:onClick="categoryButtonOnClick"
         style="@style/TopBarDropdownStyle"/>
 
+    <WebView
+        android:id="@+id/detail_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_marginBottom="@dimen/browse_list_view_padding"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,13 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.grant.amos.deviantart.AsyncImageView
-                android:id="@+id/detail_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/browse_list_view_padding"/>
-
-            <com.grant.amos.deviantart.AsyncImageView
+            <WebView
                 android:id="@+id/user_icon_image_view"
                 android:layout_width="@dimen/user_icon_size"
                 android:layout_height="@dimen/user_icon_size"

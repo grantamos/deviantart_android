@@ -11,8 +11,6 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        /**  From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\colors.xml 
-         */
         public static final int background_end=0x7f040000;
         public static final int background_start=0x7f040001;
         public static final int da_accent_green=0x7f040002;
@@ -25,9 +23,6 @@ public final class R {
         public static final int white=0x7f040009;
     }
     public static final class dimen {
-        /**  From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\dimens.xml 
- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-sw720dp-land\dimens.xml 
-         */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
         public static final int browse_list_view_margin_horizontal=0x7f050002;
@@ -84,8 +79,6 @@ public final class R {
         public static final int main=0x7f080001;
     }
     public static final class string {
-        /**  From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\strings.xml 
-         */
         public static final int action_settings=0x7f060000;
         public static final int all_time=0x7f060001;
         public static final int app_name=0x7f060002;
@@ -100,15 +93,12 @@ public final class R {
         public static final int whats_hot=0x7f06000b;
     }
     public static final class style {
-        /**  From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\styles.xml 
-
+        /** 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-v11\styles.xml 
  API 11 theme customizations can go here. 
- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-v14\styles.xml 
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f070000;

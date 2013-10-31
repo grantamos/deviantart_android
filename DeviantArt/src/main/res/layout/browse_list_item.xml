@@ -16,10 +16,9 @@
         android:padding="1dp"
         android:background="@drawable/browse_list_view_item_background">
 
-        <com.grant.amos.deviantart.AsyncImageView
+        <WebView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
             android:id="@+id/image"/>
 
         <TextView

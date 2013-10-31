@@ -16,10 +16,9 @@
         android:padding="1dp"
         android:background="@drawable/browse_list_view_item_background">
 
-        <com.grant.amos.deviantart.AsyncImageView
+        <WebView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
             android:id="@+id/image"/>
 
         <TextView
@@ -44,4 +43,4 @@
             android:textColor="@color/da_accent_green"/>
     </LinearLayout>
 
-</LinearLayout><!-- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\browse_list_item.xml -->
+</LinearLayout><!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/layout/browse_list_item.xml -->

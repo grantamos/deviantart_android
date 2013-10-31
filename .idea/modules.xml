@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DeviantArt/DeviantArt.iml" filepath="$PROJECT_DIR$/DeviantArt/DeviantArt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DeviantArtProject.iml" filepath="$PROJECT_DIR$/DeviantArtProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deviantart_android.iml" filepath="$PROJECT_DIR$/deviantart_android.iml" />
     </modules>
   </component>
 </project>
