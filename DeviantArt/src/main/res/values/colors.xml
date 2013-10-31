@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_start">@color/da_light_green</color>
+    <color name="background_end">#ff415447</color>
+    <color name="da_light_green">#ff37473c</color>
+    <color name="da_green">#ff304234</color>
+    <color name="da_green_shadow">#ff203023</color>
+    <color name="da_dark_green">#ff142419</color>
+    <color name="da_header_green">#ff111811</color>
+    <color name="da_accent_green">#ffc7d92d</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+</resources>

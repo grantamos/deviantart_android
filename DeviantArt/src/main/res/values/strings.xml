@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DeviantArt</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="eight_hrs">8 HOURS</string>
+    <string name="whats_hot">HOT</string>
+    <string name="newest">NEWEST</string>
+    <string name="twenty_four_hrs">24 HOURS</string>
+    <string name="three_days">3 DAYS</string>
+    <string name="one_week">1 WEEK</string>
+    <string name="one_month">1 MONTH</string>
+    <string name="all_time">ALL TIME</string>
+    <string name="title_activity_image_detail">ImageDetailActivity</string>
+
+</resources>

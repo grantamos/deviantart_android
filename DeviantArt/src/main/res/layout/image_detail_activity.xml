@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageDetailActivity">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bar_background"
+        android:id="@+id/top_bar"/>
+
+    <ImageView
+        android:layout_width="@dimen/top_bar_button_size"
+        android:layout_height="@dimen/top_bar_button_size"
+        android:id="@+id/deviant_art_logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/top_bar_padding"
+        android:src="@drawable/deviant_art_logo_transparent"
+        android:scaleType="fitEnd"/>
+
+    <Button
+        android:layout_width="@dimen/top_bar_button_size"
+        android:layout_height="@dimen/top_bar_button_size"
+        android:layout_margin="@dimen/top_bar_padding"
+        android:id="@+id/menu_button"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/menu_icon"/>
+
+    <Button
+        android:layout_width="@dimen/top_bar_dropdown_width"
+        android:layout_height="@dimen/top_bar_button_size"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/deviant_art_logo"
+        android:layout_toRightOf="@id/menu_button"
+        android:layout_margin="@dimen/top_bar_padding"
+        android:text="POPULAR"
+        android:id="@+id/category_button"
+        android:onClick="categoryButtonOnClick"
+        style="@style/TopBarDropdownStyle"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.grant.amos.deviantart.AsyncImageView
+                android:id="@+id/detail_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/browse_list_view_padding"/>
+
+            <com.grant.amos.deviantart.AsyncImageView
+                android:id="@+id/user_icon_image_view"
+                android:layout_width="@dimen/user_icon_size"
+                android:layout_height="@dimen/user_icon_size"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/detail_image_view"
+                android:layout_margin="@dimen/user_icon_margin"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_image_view"
+                android:layout_toRightOf="@id/user_icon_image_view"
+                android:paddingLeft="@dimen/browse_list_view_padding"
+                android:paddingRight="@dimen/browse_list_view_padding"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/da_accent_green"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/title"
+                android:layout_toRightOf="@id/user_icon_image_view"
+                android:paddingLeft="@dimen/browse_list_view_padding"
+                android:paddingRight="@dimen/browse_list_view_padding"
+                android:paddingBottom="@dimen/browse_list_view_padding"
+                android:textAllCaps="true"
+                android:textColor="@color/da_accent_green"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
