@@ -2,129 +2,139 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res" >
+        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res" >
             <file
                 name="background"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\background.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="browse_list_view_item_background"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\browse_list_view_item_background.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\browse_list_view_item_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="deviant_art_logo_big"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\deviant_art_logo_big.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\deviant_art_logo_big.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="deviant_art_logo_transparent"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\deviant_art_logo_transparent.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\deviant_art_logo_transparent.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="list_item_background"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\list_item_background.9.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\list_item_background.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="top_bar_background"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\top_bar_background.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\top_bar_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="top_bar_dropdown_background"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\top_bar_dropdown_background.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\top_bar_dropdown_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-hdpi\icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\icon.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-hdpi\ic_launcher.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="menu_icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-hdpi\menu_icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\menu_icon.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-mdpi\icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\icon.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-mdpi\ic_launcher.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_launcher.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="menu_icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-mdpi\menu_icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\menu_icon.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="triangle_icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-mdpi\triangle_icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\triangle_icon.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xhdpi\icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\icon.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xhdpi\ic_launcher.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_launcher.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="menu_icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xhdpi\menu_icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\menu_icon.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xxhdpi\icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\icon.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="menu_icon"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable-xxhdpi\menu_icon.png"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\menu_icon.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="activity_browse"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\activity_browse.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\activity_browse.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_login"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\activity_login.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\activity_login.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="browse_list_item"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\browse_list_item.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\browse_list_item.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="main"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\menu\main.xml"
+                name="image_detail_activity"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\image_detail_activity.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="image_detail"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\menu\image_detail.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\colors.xml"
+                name="main"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\menu\main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values\colors.xml"
                 qualifiers="" >
                 <color name="da_header_green" >#ff111811
                 </color>
@@ -148,7 +158,7 @@
                 </color>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\dimens.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -180,7 +190,7 @@
                 </dimen>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\strings.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values\strings.xml"
                 qualifiers="" >
                 <string name="title_activity_image_detail" >ImageDetailActivity
                 </string>
@@ -208,7 +218,7 @@
                 </string>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values\styles.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values\styles.xml"
                 qualifiers="" >
 
                 <style name="TextOnlyButton" >
@@ -278,16 +288,13 @@ false
                 </style>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-sw600dp\dimens.xml"
-                qualifiers="sw600dp" />
-            <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-sw720dp-land\dimens.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values-sw720dp-land\dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-v11\styles.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -298,7 +305,7 @@ false
                 </style>
             </file>
             <file
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\values-v14\styles.xml"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -308,21 +315,11 @@ false
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                name="image_detail_activity"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\image_detail_activity.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="image_detail"
-                path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\menu\image_detail.xml"
-                qualifiers=""
-                type="menu" />
         </source>
-        <source path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\build\res\rs\debug" />
+        <source path="C:\Developer\android\deviantart_android\DeviantArt\build\res\rs\debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\debug\res" />
+        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\debug\res" />
     </dataSet>
 
 </merger>

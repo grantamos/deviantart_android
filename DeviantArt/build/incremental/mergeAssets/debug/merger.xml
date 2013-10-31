@@ -2,10 +2,14 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\assets" />
+        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\main\assets" >
+            <file
+                name="html/imageViewer.html"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\assets\html\imageViewer.html" />
+        </source>
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\debug\assets" />
+        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\debug\assets" />
     </dataSet>
 
 </merger>

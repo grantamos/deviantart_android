@@ -28,45 +28,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2fa3652-15a7-470e-9023-a90d2dd83a32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/util/WebViewImageHTML.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/WebViewTouchListener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Developer\android\deviantart_android\DeviantArt\src\main\java\com\grant\amos\deviantart\AsyncImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Developer\android\deviantart_android\DeviantArt\src\main\java\com\grant\amos\util\AsyncImageTask.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Developer\android\deviantart_android\DeviantArt\src\main\java\com\grant\amos\util\DownloadableImageDrawable.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Developer\android\deviantart_android\DeviantArt\src\main\java\com\grant\amos\util\ImageCache.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Developer\android\deviantart_android\DeviantArt\src\main\java\com\grant\amos\util\ScalableImageView.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Developer\android\deviantart_android\DeviantArtProject.iml" afterPath="$PROJECT_DIR$/deviantart_android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseActivity.java" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseListAdapter.java" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/source/buildConfig/debug/com/grant/amos/deviantart/BuildConfig.java" afterPath="$PROJECT_DIR$/DeviantArt/build/source/buildConfig/debug/com/grant/amos/deviantart/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/DeviantArt.iml" afterPath="$PROJECT_DIR$/DeviantArt/DeviantArt.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/ImageDetailActivity.java" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/ImageDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/LoginActivity.java" afterPath="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/source/r/debug/com/grant/amos/deviantart/R.java" afterPath="$PROJECT_DIR$/DeviantArt/build/source/r/debug/com/grant/amos/deviantart/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/activity_browse.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/activity_browse.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/background.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/browse_list_item.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/browse_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/res/layout/browse_list_item.xml" afterPath="$PROJECT_DIR$/DeviantArt/src/main/res/layout/browse_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/browse_list_view_item_background.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/browse_list_view_item_background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build.gradle" afterPath="$PROJECT_DIR$/DeviantArt/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/assets/html/imageViewer.html" afterPath="$PROJECT_DIR$/DeviantArt/src/main/assets/html/imageViewer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/menu/image_detail.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/menu/image_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/image_detail_activity.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/layout/image_detail_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/src/main/res/layout/image_detail_activity.xml" afterPath="$PROJECT_DIR$/DeviantArt/src/main/res/layout/image_detail_activity.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/menu/main.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/top_bar_background.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/top_bar_background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/top_bar_dropdown_background.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/drawable/top_bar_dropdown_background.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-sw720dp-land/values.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-sw720dp-land/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-v11/values.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-v11/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-v14/values.xml" afterPath="$PROJECT_DIR$/DeviantArt/build/res/all/debug/values-v14/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DeviantArt.iws" />
@@ -127,8 +99,8 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseActivity.java" line="86" class="com.grant.amos.deviantart.BrowseActivity$1" package="com.grant.amos.deviantart">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseActivity.java" line="87" class="com.grant.amos.deviantart.BrowseActivity$1" package="com.grant.amos.deviantart">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -152,7 +124,19 @@
     <favorites_list name="DeviantArt" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="WebViewImageHTML.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/util/WebViewImageHTML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="5" selection-start="961" selection-end="961" vertical-scroll-proportion="0.8132184" vertical-offset="295" max-vertical-offset="714">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -183,26 +167,6 @@
     </option>
     <option name="availableProjects">
       <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="DeviantArtProject" />
-              <option name="path" value="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="DeviantArtProject" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value="DeviantArt" />
-                <option name="path" value="$PROJECT_DIR$/DeviantArt" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
         <entry>
           <key>
             <ExternalProjectPojo>
@@ -534,7 +498,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\Grant\AndroidStudioProjects\DeviantArtProject" value="1383183142674" />
+        <entry key="C:\Developer\android\deviantart_android" value="1372046286462" />
+        <entry key="C:\Users\Grant\AndroidStudioProjects" value="1372046286022" />
       </map>
     </option>
   </component>
@@ -555,8 +520,8 @@
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/util/WebViewImageHTML.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/browse_list_item.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/image_detail_activity.xml" />
-        <option value="$PROJECT_DIR$/DeviantArt/src/main/assets/html/imageViewer.html" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/ImageDetailActivity.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/assets/html/imageViewer.html" />
       </list>
     </option>
   </component>
@@ -595,6 +560,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -649,10 +615,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DeviantArt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DeviantArt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviantart_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DeviantArt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,6 +724,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0585a30a" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MonoForAndroid_API_10" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -813,19 +873,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -851,6 +898,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1008,27 +1068,27 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21775417" sideWeight="0.57885903" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39464882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42028984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24545455" sideWeight="0.4392265" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15833333" sideWeight="0.4548495" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32274246" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37458193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15833333" sideWeight="0.4548495" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32166666" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37458193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20058565" sideWeight="0.67558527" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.60033447" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24545455" sideWeight="0.55801105" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.60033447" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.55801105" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27090302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21775417" sideWeight="0.57885903" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1037,13 +1097,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2785235" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15833333" sideWeight="0.4548495" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.60033447" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15833333" sideWeight="0.4548495" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.60033447" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20182094" sideWeight="0.57859534" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27591974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27591974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1056,8 +1116,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4214047" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.60033447" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1077,9 +1137,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DeviantArt/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="185" selection-end="185" vertical-scroll-proportion="0.4314721" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="10" column="14" selection-start="185" selection-end="185" vertical-scroll-proportion="0.4314721" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/LoginActivity.java">
@@ -1090,48 +1148,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/activity_browse.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="324" column="0" selection-start="13564" selection-end="13564" vertical-scroll-proportion="5.8649516" vertical-offset="3684" max-vertical-offset="6290" />
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="324" column="0" selection-start="13564" selection-end="13564" vertical-scroll-proportion="5.8649516" vertical-offset="3684" max-vertical-offset="6290">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/AsyncJSONRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="45" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.41346154" vertical-offset="959" max-vertical-offset="1513">
-          <folding />
-        </state>
+        <state line="77" column="45" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.41346154" vertical-offset="959" max-vertical-offset="1513" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/LayoutInflater.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.33110368" vertical-offset="445" max-vertical-offset="1003">
-          <folding />
-        </state>
+        <state line="33" column="29" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.33110368" vertical-offset="445" max-vertical-offset="1003" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/widget/AdapterView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="2193">
-          <folding />
-        </state>
+        <state line="22" column="19" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="2193" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1025" column="16" selection-start="45778" selection-end="45778" vertical-scroll-proportion="0.33126935" vertical-offset="17301" max-vertical-offset="19482">
-          <folding />
-        </state>
+        <state line="1025" column="16" selection-start="45778" selection-end="45778" vertical-scroll-proportion="0.33126935" vertical-offset="17301" max-vertical-offset="19482" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/widget/AbsListView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.33126935" vertical-offset="539" max-vertical-offset="5202">
-          <folding />
-        </state>
+        <state line="39" column="19" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.33126935" vertical-offset="539" max-vertical-offset="5202" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseActivity.java">
@@ -1145,30 +1191,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/WebViewTouchListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="226" selection-end="226" vertical-scroll-proportion="0.45535713" vertical-offset="0" max-vertical-offset="867">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/util/WebViewImageHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="392" selection-end="392" vertical-scroll-proportion="0.37356323" vertical-offset="142" max-vertical-offset="714">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="9" column="32" selection-start="226" selection-end="226" vertical-scroll-proportion="0.45535713" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/browse_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="65" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.7894737" vertical-offset="204" max-vertical-offset="867" />
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="65" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.7894737" vertical-offset="204" max-vertical-offset="867">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/deviantart/BrowseListAdapter.java">
@@ -1186,39 +1217,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/image_detail_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="71" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.94736844" vertical-offset="510" max-vertical-offset="1734" />
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="71" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.94736844" vertical-offset="510" max-vertical-offset="1734">
-          <folding>
-            <element signature="e#333#356#0" expanded="true" />
-            <element signature="e#541#569#0" expanded="true" />
-            <element signature="e#600#628#0" expanded="true" />
-            <element signature="e#794#818#0" expanded="true" />
-            <element signature="e#959#987#0" expanded="true" />
-            <element signature="e#1018#1046#0" expanded="true" />
-            <element signature="e#1077#1101#0" expanded="true" />
-            <element signature="e#1279#1310#0" expanded="true" />
-            <element signature="e#1341#1369#0" expanded="true" />
-            <element signature="e#1553#1577#0" expanded="true" />
-            <element signature="e#1970#2003#0" expanded="true" />
-            <element signature="e#2441#2464#0" expanded="true" />
-            <element signature="e#2503#2526#0" expanded="true" />
-            <element signature="e#2680#2705#0" expanded="true" />
-            <element signature="e#3040#3073#0" expanded="true" />
-            <element signature="e#3111#3144#0" expanded="true" />
-            <element signature="e#3613#3646#0" expanded="true" />
-            <element signature="e#3684#3717#0" expanded="true" />
-            <element signature="e#3756#3789#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/assets/html/imageViewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="116" selection-end="163" vertical-scroll-proportion="0.3167702" vertical-offset="0" max-vertical-offset="357">
+        <state line="5" column="22" selection-start="90" selection-end="90" vertical-scroll-proportion="0.23602484" vertical-offset="9" max-vertical-offset="357">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grant/amos/util/WebViewImageHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="961" selection-end="961" vertical-scroll-proportion="0.8132184" vertical-offset="295" max-vertical-offset="714">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
