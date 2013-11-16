@@ -1,2 +1,0 @@
-deviantart_android
-==================
