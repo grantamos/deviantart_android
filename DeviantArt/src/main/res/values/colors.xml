@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_start">@color/da_light_green</color>
-    <color name="background_end">#ff415447</color>
-    <color name="da_light_green">#ff37473c</color>
-    <color name="da_green">#ff304234</color>
-    <color name="da_green_shadow">#ff203023</color>
-    <color name="da_dark_green">#ff142419</color>
-    <color name="da_header_green">#ff111811</color>
-    <color name="da_accent_green">#ffc7d92d</color>
+
+    <color name="light_green">#ff37473c</color>
+    <color name="green">#ff304234</color>
+    <color name="dark_green">#142419</color>
+    <color name="green_shadow">#111811</color>
+    <color name="green_highlight">#556258</color>
+    <color name="accent">#c6da2b</color>
+
+    <color name="background_start">#ff415447</color>
+    <color name="background_end">@color/light_green</color>
 
     <color name="transparent">#00000000</color>
+    <color name="transparent_half_white">#88FFFFFF</color>
+    <color name="transparent_quarter_white">#44FFFFFF</color>
     <color name="white">#ffffffff</color>
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
 </resources>

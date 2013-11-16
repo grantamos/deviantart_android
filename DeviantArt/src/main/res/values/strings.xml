@@ -14,4 +14,7 @@
     <string name="all_time">ALL TIME</string>
     <string name="title_activity_image_detail">ImageDetailActivity</string>
 
+    <string name="drawer_open">Category</string>
+    <string name="drawer_closed">DeviantArt</string>
+
 </resources>

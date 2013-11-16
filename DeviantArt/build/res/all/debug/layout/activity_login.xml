@@ -32,8 +32,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="20dp"
-        android:background="@color/da_accent_green"
-        android:textColor="@color/da_dark_green"
+        android:background="@color/accent"
+        android:textColor="@color/dark_green"
         android:onClick="login"/>
 
     <EditText
@@ -59,4 +59,4 @@
         android:textColor="#FFF"
         android:hint="USERNAME"/>
 
-</RelativeLayout><!-- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\layout\activity_login.xml -->
+</RelativeLayout><!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/layout/activity_login.xml -->

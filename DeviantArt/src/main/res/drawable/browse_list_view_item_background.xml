@@ -4,19 +4,19 @@
 
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/da_green_shadow"/>
+            <solid android:color="@color/green_shadow"/>
         </shape>
     </item>
 
     <item android:left="1dp" android:top="1dp">
         <shape android:shape="rectangle">
-            <solid android:color="@color/da_header_green"/>
+            <solid android:color="@color/dark_green"/>
         </shape>
     </item>
 
     <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
         <shape android:shape="rectangle">
-            <solid android:color="@color/da_dark_green"/>
+            <solid android:color="@color/dark_green"/>
         </shape>
     </item>
 

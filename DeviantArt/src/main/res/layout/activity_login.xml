@@ -32,8 +32,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="20dp"
-        android:background="@color/da_accent_green"
-        android:textColor="@color/da_dark_green"
+        android:background="@color/accent"
+        android:textColor="@color/dark_green"
         android:onClick="login"/>
 
     <EditText

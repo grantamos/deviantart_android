@@ -1,22 +1,20 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.grant.amos.deviantart">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.grantamos.android.deviantart">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="18"/>
 
     <application android:allowBackup="true" android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@style/AppTheme">
-        <activity android:label="@string/app_name" android:name="com.grant.amos.deviantart.LoginActivity" android:noHistory="true">
+        <activity android:label="@string/app_name" android:name="com.grantamos.android.deviantart.activity.LoginActivity" android:noHistory="true" android:theme="@style/LoginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.grant.amos.deviantart.BrowseActivity">
+        <activity android:label="@string/app_name" android:name="com.grantamos.android.deviantart.activity.BrowseActivity">
             <intent-filter>
             </intent-filter>
-        </activity>
-        <activity android:label="@string/title_activity_image_detail" android:name="com.grant.amos.deviantart.ImageDetailActivity">
         </activity>
     </application>
 

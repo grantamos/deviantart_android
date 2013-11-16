@@ -3,14 +3,14 @@
 
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/da_green_shadow" />
+            <solid android:color="@color/green_shadow" />
         </shape>
     </item>
 
     <item android:bottom="2dp">
         <shape android:shape="rectangle">
-            <solid android:color="@color/da_green" />
+            <solid android:color="@color/green" />
         </shape>
     </item>
 
-</layer-list><!-- From: C:\Users\Grant\AndroidStudioProjects\DeviantArtProject\DeviantArt\src\main\res\drawable\top_bar_background.xml -->
+</layer-list><!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/drawable/top_bar_background.xml -->

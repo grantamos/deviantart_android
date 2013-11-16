@@ -1,6 +1,17 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_time"
+        android:title="8HR"
+        android:icon="@drawable/ic_action_time"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_view"
+        android:title="Time"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
 </menu>
