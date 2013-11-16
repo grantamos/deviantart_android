@@ -17,6 +17,9 @@ public class KTreeNode<T> implements Serializable {
         this.object = t;
         this.parent = parent;
 
+        if(parent != null)
+            this.parent.addChild(this);
+
         children = new ArrayList<KTreeNode>();
 
         KTreeNode<T> node = this.parent;

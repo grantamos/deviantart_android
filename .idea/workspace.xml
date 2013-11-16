@@ -83,21 +83,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/DrillDownArrayAdapter.java" line="69" class="com.grantamos.android.deviantart.adapter.DrillDownArrayAdapter" package="com.grantamos.android.deviantart.adapter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -111,58 +96,51 @@
       <file leaf-file-name="BrowseActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="50" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.4736842" vertical-offset="255" max-vertical-offset="2686">
+            <state line="59" column="17" selection-start="2473" selection-end="2473" vertical-scroll-proportion="0.84210527" vertical-offset="408" max-vertical-offset="2788">
               <folding>
-                <element signature="e#5007#5021#0" expanded="true" />
-                <element signature="e#5128#5142#0" expanded="true" />
-                <element signature="e#5568#5582#0" expanded="true" />
-                <element signature="e#5894#5908#0" expanded="true" />
+                <element signature="e#2916#2936#0" expanded="true" />
+                <element signature="e#2987#3009#0" expanded="true" />
+                <element signature="e#5476#5490#0" expanded="true" />
+                <element signature="e#5596#5610#0" expanded="true" />
+                <element signature="e#5717#5731#0" expanded="true" />
+                <element signature="e#6106#6120#0" expanded="true" />
+                <element signature="e#6398#6412#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="background.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/drawable/background.xml">
+      <file leaf-file-name="KTreeNode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="30" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="289">
-              <folding />
+            <state line="74" column="23" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1717">
+              <folding>
+                <element signature="method#getDepth#0;class#KTreeNode#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/values/colors.xml">
+      <file leaf-file-name="MultiExpandingListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/MultiExpandingListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="49" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="476">
-              <folding />
+            <state line="92" column="38" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="1887">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryItem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/helpers/CategoryItem.java">
+      <file leaf-file-name="MultiExpandingListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/MultiExpandingListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="62" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="459">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrowseActivityInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivityInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="32" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrillDownListFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/DrillDownListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="16" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2074">
-              <folding />
+            <state line="62" column="36" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="2414">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3830#3831#0" expanded="true" />
+                <element signature="e#3879#3880#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -562,7 +540,6 @@
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/drawable/borderless_button_background.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivityInterface.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_item_drawer.xml" />
-        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drill_down.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/DrillDownArrayAdapter.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/DrillDownListFragment.java" />
@@ -573,6 +550,11 @@
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/activity_browse.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/drawable/background.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/MultiExpandingTreeAdapter.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drawer.xml" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/MultiExpandingListAdapter.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/MultiExpandingListFragment.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivity.java" />
       </list>
     </option>
@@ -609,6 +591,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -1062,7 +1045,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1118,19 +1100,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1156,6 +1125,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1275,12 +1257,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="754" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39833334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1297,13 +1280,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.168693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19072948" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32666665" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1325,46 +1307,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="527">
-          <folding>
-            <element signature="method#getDepth#0;class#KTreeNode#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="41" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
-          <folding>
-            <element signature="e#5007#5021#0" expanded="true" />
-            <element signature="e#5128#5142#0" expanded="true" />
-            <element signature="e#5568#5582#0" expanded="true" />
-            <element signature="e#5894#5908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/ImageListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="100" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1972">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_image.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/ImageDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="48" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
@@ -1426,11 +1368,6 @@
         <state line="26" column="5" selection-start="667" selection-end="667" vertical-scroll-proportion="-1.9961686" vertical-offset="742" max-vertical-offset="1003">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/widget/ListView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.3313433" vertical-offset="484" max-vertical-offset="2176" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/ImageCache.java">
@@ -1549,11 +1486,6 @@
         <state line="75" column="0" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0" vertical-offset="1038" max-vertical-offset="1360" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/view/Choreographer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="743" selection-end="743" vertical-scroll-proportion="0.6832298" vertical-offset="103" max-vertical-offset="425" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/os/Handler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="0" selection-start="3379" selection-end="3379" vertical-scroll-proportion="0.6832298" vertical-offset="1089" max-vertical-offset="1411" />
@@ -1564,28 +1496,9 @@
         <state line="11" column="44" selection-start="569" selection-end="569" vertical-scroll-proportion="-3.0385964" vertical-offset="1036" max-vertical-offset="1581" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="21" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1666">
-          <folding>
-            <element signature="method#getDepth#0;class#KTreeNode#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_item_drawer.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="30" selection-start="139" selection-end="139" vertical-scroll-proportion="0.1442953" vertical-offset="8" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drill_down.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="229" selection-end="229" vertical-scroll-proportion="0.2852349" vertical-offset="0" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
@@ -1601,24 +1514,6 @@
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/widget/ArrayAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="35" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.33225808" vertical-offset="509" max-vertical-offset="1037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/DrillDownListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="16" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/DrillDownArrayAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="5" selection-start="2587" selection-end="2587" vertical-scroll-proportion="1.7161291" vertical-offset="828" max-vertical-offset="1581">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2551#2552#0" expanded="true" />
-            <element signature="e#2586#2587#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/drawable/borderless_button_background.xml">
@@ -1652,20 +1547,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/helpers/CategoryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivityInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="57" selection-start="505" selection-end="505" vertical-scroll-proportion="0.57894737" vertical-offset="0" max-vertical-offset="1003">
@@ -1690,28 +1571,131 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/drawable/background.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="49" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+        <state line="6" column="30" selection-start="186" selection-end="186" vertical-scroll-proportion="0.17770036" vertical-offset="0" max-vertical-offset="574">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/drawable/background.xml">
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+        <state line="7" column="49" selection-start="283" selection-end="283" vertical-scroll-proportion="0.20731707" vertical-offset="0" max-vertical-offset="574">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/helpers/CategoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="62" selection-start="309" selection-end="309" vertical-scroll-proportion="0.3554007" vertical-offset="0" max-vertical-offset="574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivityInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="32" selection-start="294" selection-end="294" vertical-scroll-proportion="0.2665505" vertical-offset="0" max-vertical-offset="574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drill_down.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="347" selection-end="347" vertical-scroll-proportion="0.3096539" vertical-offset="0" max-vertical-offset="549">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/DrillDownArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="797" selection-end="797" vertical-scroll-proportion="0.6363636" vertical-offset="102" max-vertical-offset="1547">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drawer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.18579236" vertical-offset="0" max-vertical-offset="549">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/DrillDownListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="31" selection-start="2943" selection-end="2943" vertical-scroll-proportion="0.4738676" vertical-offset="918" max-vertical-offset="1802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/view/Choreographer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/widget/ListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="19" selection-start="4329" selection-end="4329" vertical-scroll-proportion="0.33229813" vertical-offset="1576" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar!/android/support/v4/app/ListFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="38" selection-start="2127" selection-end="2127" vertical-scroll-proportion="-6.76" vertical-offset="664" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/KTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="23" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1717">
+          <folding>
+            <element signature="method#getDepth#0;class#KTreeNode#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/adapter/MultiExpandingListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="36" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="2414">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3830#3831#0" expanded="true" />
+            <element signature="e#3879#3880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/MultiExpandingListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="38" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="1887">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="50" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.4736842" vertical-offset="255" max-vertical-offset="2686">
+        <state line="59" column="17" selection-start="2473" selection-end="2473" vertical-scroll-proportion="0.84210527" vertical-offset="408" max-vertical-offset="2788">
           <folding>
-            <element signature="e#5007#5021#0" expanded="true" />
-            <element signature="e#5128#5142#0" expanded="true" />
-            <element signature="e#5568#5582#0" expanded="true" />
-            <element signature="e#5894#5908#0" expanded="true" />
+            <element signature="e#2916#2936#0" expanded="true" />
+            <element signature="e#2987#3009#0" expanded="true" />
+            <element signature="e#5476#5490#0" expanded="true" />
+            <element signature="e#5596#5610#0" expanded="true" />
+            <element signature="e#5717#5731#0" expanded="true" />
+            <element signature="e#6106#6120#0" expanded="true" />
+            <element signature="e#6398#6412#0" expanded="true" />
           </folding>
         </state>
       </provider>

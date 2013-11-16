@@ -1,5 +1,6 @@
 package com.grantamos.android.deviantart.activity;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -12,9 +13,11 @@ import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import com.grantamos.android.deviantart.AsyncJSONRequest;
+import com.grantamos.android.deviantart.adapter.MultiExpandingListAdapter;
 import com.grantamos.android.deviantart.fragment.DrillDownListFragment;
 import com.grantamos.android.deviantart.fragment.ImageListFragment;
 import com.grantamos.android.deviantart.R;
+import com.grantamos.android.deviantart.fragment.MultiExpandingListFragment;
 import com.grantamos.android.deviantart.helpers.CategoryItem;
 import com.grantamos.android.util.KTreeNode;
 
@@ -29,8 +32,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     ActionBarDrawerToggle mDrawerToggle;
     CharSequence mDrawerTitle = "CATEGORIES";
     ImageListFragment mImageListFragment;
-    ExpandableListView mDrawerList;
-    DrillDownListFragment mDrillDownListFragment;
+    MultiExpandingListFragment mMultiExpandingListFragment;
     CategoryItem selectedCategory;
 
     @Override
@@ -48,12 +50,14 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
 
             KTreeNode<CategoryItem> tree = setupNavigationTree();
             selectedCategory = tree.getValue();
-            mDrillDownListFragment = DrillDownListFragment.newInstance(tree, R.id.drawer_content);
+            mMultiExpandingListFragment = MultiExpandingListFragment.newInstance(tree);
 
             getSupportFragmentManager().beginTransaction()
-                    .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                    .add(R.id.drawer_content, mDrillDownListFragment)
+                    //.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+                    .add(R.id.drawer_content, mMultiExpandingListFragment)
                     .commit();
+        } else {
+            selectedCategory = (CategoryItem) savedInstanceState.getSerializable("selectedCategory");
         }
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -86,6 +90,13 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
 
         //setupViews();
         //getBrowseData();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+
+        super.onSaveInstanceState(outState);
+        outState.putSerializable("selectedCategory", selectedCategory);
     }
 
     @Override
@@ -135,25 +146,23 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     public KTreeNode<CategoryItem> setupNavigationTree() {
         KTreeNode<CategoryItem> root = new KTreeNode<CategoryItem>(new CategoryItem("All Categories", "blah"), null);
 
+        KTreeNode<CategoryItem> root1 = new KTreeNode<CategoryItem>(new CategoryItem("All Categories", "blah"), root);
+
         KTreeNode<CategoryItem> child1 = new KTreeNode<CategoryItem>(new CategoryItem("Digital Art", "blah"), root);
-        child1.addChild(new KTreeNode<CategoryItem>(new CategoryItem("3-Dimensional Art", "blah"), child1));
-        child1.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Animation", "blah"), child1));
-        child1.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Drawings & Paintings", "blah"), child1));
+        new KTreeNode<CategoryItem>(new CategoryItem("3-Dimensional Art", "blah"), child1);
+        new KTreeNode<CategoryItem>(new CategoryItem("Animation", "blah"), child1);
+        new KTreeNode<CategoryItem>(new CategoryItem("Drawings & Paintings", "blah"), child1);
 
         KTreeNode<CategoryItem> child2 = new KTreeNode<CategoryItem>(new CategoryItem("Traditional Art", "blah"), root);
-        child2.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Animations", "blah"), child2));
-        child2.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Assemblage", "blah"), child2));
+        new KTreeNode<CategoryItem>(new CategoryItem("Animations", "blah"), child2);
+        new KTreeNode<CategoryItem>(new CategoryItem("Assemblage", "blah"), child2);
 
         KTreeNode<CategoryItem> child3 = new KTreeNode<CategoryItem>(new CategoryItem("Photography", "blah"), root);
-        child3.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Abstract & Surreal", "blah"), child3));
-        child3.addChild(new KTreeNode<CategoryItem>(new CategoryItem("Animals, Plants & Nature", "blah"), child3));
+        new KTreeNode<CategoryItem>(new CategoryItem("Abstract & Surreal", "blah"), child3);
+        new KTreeNode<CategoryItem>(new CategoryItem("Animals, Plants & Nature", "blah"), child3);
 
-        child2.getChild(0).addChild(new KTreeNode<CategoryItem>(new CategoryItem("Colored Animation", "blah"), child2.getChild(0)));
-        child2.getChild(0).addChild(new KTreeNode<CategoryItem>(new CategoryItem("Pencil Tests", "blah"), child2.getChild(0)));
-
-        root.addChild(child1);
-        root.addChild(child2);
-        root.addChild(child3);
+        new KTreeNode<CategoryItem>(new CategoryItem("Colored Animation", "blah"), child2.getChild(0));
+        new KTreeNode<CategoryItem>(new CategoryItem("Pencil Tests", "blah"), child2.getChild(0));
 
         return root;
     }

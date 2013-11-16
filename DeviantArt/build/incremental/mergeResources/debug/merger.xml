@@ -5016,6 +5016,11 @@ left|center_vertical
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\action_bar_background.xml"
                 qualifiers=""
                 type="drawable" />
+            <file
+                name="list_view_drawer"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\list_view_drawer.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="C:\Developer\android\deviantart_android\DeviantArt\build\res\rs\debug" />
     </dataSet>
