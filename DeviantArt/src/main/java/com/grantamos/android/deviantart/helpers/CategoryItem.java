@@ -17,5 +17,7 @@ public class CategoryItem implements Serializable {
 
     public String getDisplayText() { return displayText; }
 
+    public String getUrlText() { return urlText; }
+
     public String toString() { return displayText; }
 }

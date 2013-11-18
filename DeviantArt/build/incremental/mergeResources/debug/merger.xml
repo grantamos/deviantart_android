@@ -4558,6 +4558,11 @@ false
     <dataSet config="main" >
         <source path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res" >
             <file
+                name="action_bar_background"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\action_bar_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="background"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\background.xml"
                 qualifiers=""
@@ -4608,6 +4613,21 @@ false
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="ic_action_time"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_time.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_grid"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_view_as_grid.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_list"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_view_as_list.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_drawer"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_drawer.png"
                 qualifiers="hdpi"
@@ -4630,6 +4650,21 @@ false
             <file
                 name="icon"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\icon.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_action_time"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_time.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_grid"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_view_as_grid.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_list"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_view_as_list.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
@@ -4663,6 +4698,21 @@ false
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="ic_action_time"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_time.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_grid"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_view_as_grid.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_list"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_view_as_list.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_drawer"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_drawer.png"
                 qualifiers="xhdpi"
@@ -4685,6 +4735,21 @@ false
             <file
                 name="icon"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\icon.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_time"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_time.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_grid"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_view_as_grid.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_view_as_list"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_view_as_list.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
@@ -4733,6 +4798,11 @@ false
                 qualifiers=""
                 type="layout" />
             <file
+                name="list_view_drawer"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\list_view_drawer.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="list_view_drill_down"
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\list_view_drill_down.xml"
                 qualifiers=""
@@ -4743,8 +4813,13 @@ false
                 qualifiers=""
                 type="layout" />
             <file
-                name="main"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\menu\main.xml"
+                name="spinner_time"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\spinner_time.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="menu_browse"
+                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\menu\menu_browse.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -4756,17 +4831,17 @@ false
                 </color>
                 <color name="holo_blue_bright" >#ff00ddff
                 </color>
-                <color name="transparent_quarter_white" >#44FFFFFF
-                </color>
                 <color name="dark_green" >#142419
+                </color>
+                <color name="transparent_quarter_white" >#44FFFFFF
                 </color>
                 <color name="green_highlight" >#556258
                 </color>
-                <color name="background_end" >@color/light_green
+                <color name="green_shadow" >#111811
                 </color>
                 <color name="background_start" >#ff415447
                 </color>
-                <color name="green_shadow" >#111811
+                <color name="background_end" >@color/light_green
                 </color>
                 <color name="holo_blue_light" >#ff33b5e5
                 </color>
@@ -4814,33 +4889,43 @@ false
             <file
                 path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\values\strings.xml"
                 qualifiers="" >
+                <string name="title_activity_image_detail" >ImageDetailActivity
+                </string>
                 <string name="drawer_closed" >DeviantArt
                 </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="twenty_four_hrs" >24 HOURS
-                </string>
-                <string name="three_days" >3 DAYS
-                </string>
-                <string name="eight_hrs" >8 HOURS
-                </string>
-                <string name="one_week" >1 WEEK
-                </string>
-                <string name="whats_hot" >HOT
-                </string>
-                <string name="newest" >NEWEST
-                </string>
-                <string name="title_activity_image_detail" >ImageDetailActivity
-                </string>
-                <string name="one_month" >1 MONTH
-                </string>
+
+                <string-array name="time" >
+                    <item name="eight_hrs">
+8HRS
+                    </item>
+                    <item name="whats_hot">
+HOT
+                    </item>
+                    <item name="newest">
+NEW
+                    </item>
+                    <item name="twenty_four_hrs">
+24HRS
+                    </item>
+                    <item name="three_days">
+3DAYS
+                    </item>
+                    <item name="one_week">
+WEEK
+                    </item>
+                    <item name="one_month">
+MONTH
+                    </item>
+                    <item name="all_time">
+ALL
+                    </item>
+                </string-array>
+
                 <string name="app_name" >DeviantArt
                 </string>
-                <string name="all_time" >ALL TIME
-                </string>
                 <string name="drawer_open" >Category
-                </string>
-                <string name="hello_world" >Hello world!
                 </string>
             </file>
             <file
@@ -4951,76 +5036,6 @@ left|center_vertical
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
-            <file
-                name="ic_action_view_as_grid"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_view_as_grid.png"
-                qualifiers="xxhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_grid"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_view_as_grid.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_time"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_time.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_grid"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_view_as_grid.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_list"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xhdpi\ic_action_view_as_list.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_time"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_time.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_list"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-hdpi\ic_action_view_as_list.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_list"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_view_as_list.png"
-                qualifiers="xxhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_list"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_view_as_list.png"
-                qualifiers="mdpi"
-                type="drawable" />
-            <file
-                name="ic_action_time"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_time.png"
-                qualifiers="mdpi"
-                type="drawable" />
-            <file
-                name="ic_action_time"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-xxhdpi\ic_action_time.png"
-                qualifiers="xxhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_view_as_grid"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable-mdpi\ic_action_view_as_grid.png"
-                qualifiers="mdpi"
-                type="drawable" />
-            <file
-                name="action_bar_background"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\drawable\action_bar_background.xml"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="list_view_drawer"
-                path="C:\Developer\android\deviantart_android\DeviantArt\src\main\res\layout\list_view_drawer.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="C:\Developer\android\deviantart_android\DeviantArt\build\res\rs\debug" />
     </dataSet>

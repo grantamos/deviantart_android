@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
 
+    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string-array name="time">
+        <item name="eight_hrs">8HRS</item>
+        <item name="whats_hot">HOT</item>
+        <item name="newest">NEW</item>
+        <item name="twenty_four_hrs">24HRS</item>
+        <item name="three_days">3DAYS</item>
+        <item name="one_week">WEEK</item>
+        <item name="one_month">MONTH</item>
+        <item name="all_time">ALL</item>
+    </string-array>
     <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
@@ -740,19 +753,10 @@
     <eat-comment />
 
     <string name="action_settings">Settings</string>
-    <string name="all_time">ALL TIME</string>
     <string name="app_name">DeviantArt</string>
     <string name="drawer_closed">DeviantArt</string>
     <string name="drawer_open">Category</string>
-    <string name="eight_hrs">8 HOURS</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="newest">NEWEST</string>
-    <string name="one_month">1 MONTH</string>
-    <string name="one_week">1 WEEK</string>
-    <string name="three_days">3 DAYS</string>
     <string name="title_activity_image_detail">ImageDetailActivity</string>
-    <string name="twenty_four_hrs">24 HOURS</string>
-    <string name="whats_hot">HOT</string>
     <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
     <eat-comment />
 

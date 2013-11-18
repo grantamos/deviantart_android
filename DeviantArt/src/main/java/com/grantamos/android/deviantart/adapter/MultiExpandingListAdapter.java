@@ -32,6 +32,7 @@ public class MultiExpandingListAdapter extends BaseAdapter {
 
         expandNode(root);
 
+        mSelectedNode = mItems.get(0);
         mAccentColor = mContext.getResources().getColor(R.color.accent);
         mNormalColor = mContext.getResources().getColor(R.color.white);
     }

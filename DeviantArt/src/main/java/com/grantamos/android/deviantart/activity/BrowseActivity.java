@@ -1,20 +1,22 @@
 package com.grantamos.android.deviantart.activity;
 
-import android.content.Context;
 import android.content.res.Configuration;
+import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ListView;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 import com.grantamos.android.deviantart.AsyncJSONRequest;
-import com.grantamos.android.deviantart.adapter.MultiExpandingListAdapter;
-import com.grantamos.android.deviantart.fragment.DrillDownListFragment;
 import com.grantamos.android.deviantart.fragment.ImageListFragment;
 import com.grantamos.android.deviantart.R;
 import com.grantamos.android.deviantart.fragment.MultiExpandingListFragment;
@@ -25,8 +27,8 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     AsyncJSONRequest browseRequest;
     String baseURL = "http://ec2-54-200-105-129.us-west-2.compute.amazonaws.com:1337/v1/media/browse/";
     String category = "";
-    String time = "";
-    String offset = "";
+    String time = "8HRS";
+    int offset = 0, length = 0;
 
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
@@ -34,6 +36,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     ImageListFragment mImageListFragment;
     MultiExpandingListFragment mMultiExpandingListFragment;
     CategoryItem selectedCategory;
+    boolean shouldRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         setContentView(R.layout.activity_browse);
 
         if (savedInstanceState == null) {
-            mImageListFragment = ImageListFragment.newInstance(baseURL);
+            mImageListFragment = ImageListFragment.newInstance(baseURL, category, time, offset, length);
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.image_list_container, mImageListFragment)
@@ -72,6 +75,11 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle(selectedCategory.toString());
+
+                if(shouldRefresh)
+                    mImageListFragment.refreshData();
+
+                shouldRefresh = false;
             }
 
             /** Called when a drawer has settled in a completely open state. */
@@ -87,9 +95,6 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         getSupportActionBar().setHomeButtonEnabled(true);
 
         getSupportActionBar().setTitle(selectedCategory.toString());
-
-        //setupViews();
-        //getBrowseData();
     }
 
     @Override
@@ -120,7 +125,33 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_browse, menu);
+
+        MenuItem item = menu.findItem(R.id.action_time);
+        Spinner s = (Spinner) MenuItemCompat.getActionView(item);
+
+        SpinnerAdapter mSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.time,
+                R.layout.support_simple_spinner_dropdown_item);
+
+        s.setAdapter(mSpinnerAdapter);
+
+        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String newTime = adapterView.getItemAtPosition(i).toString();
+                if(newTime.compareTo(time) != 0){
+                    time = newTime;
+                    mImageListFragment.setTime(time);
+                    mImageListFragment.refreshData();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         return true;
     }
 
@@ -146,29 +177,40 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     public KTreeNode<CategoryItem> setupNavigationTree() {
         KTreeNode<CategoryItem> root = new KTreeNode<CategoryItem>(new CategoryItem("All Categories", "blah"), null);
 
-        KTreeNode<CategoryItem> root1 = new KTreeNode<CategoryItem>(new CategoryItem("All Categories", "blah"), root);
+        KTreeNode<CategoryItem> root1 = new KTreeNode<CategoryItem>(new CategoryItem("All Categories", ""), root);
 
-        KTreeNode<CategoryItem> child1 = new KTreeNode<CategoryItem>(new CategoryItem("Digital Art", "blah"), root);
-        new KTreeNode<CategoryItem>(new CategoryItem("3-Dimensional Art", "blah"), child1);
-        new KTreeNode<CategoryItem>(new CategoryItem("Animation", "blah"), child1);
-        new KTreeNode<CategoryItem>(new CategoryItem("Drawings & Paintings", "blah"), child1);
-
-        KTreeNode<CategoryItem> child2 = new KTreeNode<CategoryItem>(new CategoryItem("Traditional Art", "blah"), root);
-        new KTreeNode<CategoryItem>(new CategoryItem("Animations", "blah"), child2);
-        new KTreeNode<CategoryItem>(new CategoryItem("Assemblage", "blah"), child2);
-
-        KTreeNode<CategoryItem> child3 = new KTreeNode<CategoryItem>(new CategoryItem("Photography", "blah"), root);
-        new KTreeNode<CategoryItem>(new CategoryItem("Abstract & Surreal", "blah"), child3);
-        new KTreeNode<CategoryItem>(new CategoryItem("Animals, Plants & Nature", "blah"), child3);
-
-        new KTreeNode<CategoryItem>(new CategoryItem("Colored Animation", "blah"), child2.getChild(0));
-        new KTreeNode<CategoryItem>(new CategoryItem("Pencil Tests", "blah"), child2.getChild(0));
+        new KTreeNode<CategoryItem>(new CategoryItem("Digital Art", "digitalart"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Traditional Art", "traditional"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Photography", "photography"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Artisan Crafts", "artisan"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Literature", "literature"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Film & Animation", "file"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Motion Books", "motionbooks"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Flash", "flase"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Designs & Interfaces", "designs"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Customization", "customization"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Cartoons & Comics", "cartoons"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Manga & Anime", "manga"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Anthro", "anthro"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Fan Art", "fanart"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Resources & Stock Images", "resources"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Community Projects", "projects"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Contests", "contests"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("deviantART Related", "darelated"), root);
+        new KTreeNode<CategoryItem>(new CategoryItem("Scraps", "scraps"), root);
 
         return root;
     }
 
     public void onCategorySelected(CategoryItem categoryItem){
+        if(selectedCategory == categoryItem)
+            return;
+
         selectedCategory = categoryItem;
+        category = selectedCategory.getUrlText();
+
+        mImageListFragment.setCategory(category);
+        shouldRefresh = true;
     }
 
     public void dismissDrawer(){

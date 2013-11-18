@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_time"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.Spinner" />
+
+    <item
+        android:id="@+id/action_view"
+        android:title="Time"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:orderInCategory="100" />
+</menu>

@@ -12,9 +12,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.grantamos.android.deviantart.AsyncImageView;
+import com.grantamos.android.deviantart.AsyncJSONRequest;
 import com.grantamos.android.deviantart.ImageData;
 import com.grantamos.android.deviantart.JSONCallback;
 import com.grantamos.android.deviantart.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -22,14 +26,28 @@ import java.util.ArrayList;
  * Created by Grant on 11/4/13.
  */
 public class ImageListFragment extends ListFragment implements JSONCallback {
-    String mUrl, mJson;
+    String mBaseUrl, mCategory, mTime, mJson;
+    int mOffset, mLength;
+    AsyncJSONRequest asyncJSONRequest;
+    ListView mListView;
+    ArrayList<ImageData> mImages;
+    ImageListAdapter mImageListAdapter;
+
+    public String getCategory() { return mCategory; }
+    public void setCategory(String category) { mCategory = category; }
+
+    public void setTime(String time) { this.mTime = time; }
 
     public ImageListFragment(){}
 
-    public static ImageListFragment newInstance(String url){
+    public static ImageListFragment newInstance(String baseUrl,String category, String time, int offset, int length){
         ImageListFragment imageListFragment = new ImageListFragment();
         Bundle bundle = new Bundle();
-        bundle.putString("url", url);
+        bundle.putString("baseUrl", baseUrl);
+        bundle.putString("category", category);
+        bundle.putString("time", time);
+        bundle.putInt("offset", offset);
+        bundle.putInt("length", length);
         imageListFragment.setArguments(bundle);
 
         return imageListFragment;
@@ -48,7 +66,11 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
     public void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
 
-        outState.putString("url", this.mUrl);
+        outState.putString("baseUrl", mBaseUrl);
+        outState.putString("category", mCategory);
+        outState.putString("time", mTime);
+        outState.putInt("offset", mOffset);
+        outState.putInt("length", mLength);
         outState.putString("json", mJson);
     }
 
@@ -56,19 +78,72 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ListView listView = (ListView) inflater.inflate(R.layout.list_view_image, container, false);
+        mListView = (ListView) inflater.inflate(R.layout.list_view_image, container, false);
 
-        return listView;
+        if(mJson != null && !mJson.isEmpty())
+            consumeJSON(mJson);
+        else
+            fetchData();
+
+        return mListView;
     }
 
     public void setArguments(Bundle arguments){
-        this.mUrl = arguments.getString("url");
-        this.mJson = arguments.getString("json");
+        mBaseUrl = arguments.getString("baseUrl");
+        mCategory = arguments.getString("category");
+        mTime = arguments.getString("time");
+        mOffset = arguments.getInt("offset");
+        mLength = arguments.getInt("length");
+        mJson = arguments.getString("json");
     }
 
     public void consumeJSON(String json){
-        this.mJson = json;
+        mJson = json;
 
+        try {
+            JSONArray jsonArray = new JSONArray(mJson);
+
+            if(mImageListAdapter == null){
+                mImages = new ArrayList<ImageData>();
+                mImageListAdapter = new ImageListAdapter(getActivity(), 0, mImages);
+                mListView.setAdapter(mImageListAdapter);
+            }
+
+            for(int i = 0; i < jsonArray.length(); i++)
+                mImages.add(new ImageData(jsonArray.getJSONObject(i)));
+
+            mImageListAdapter.notifyDataSetChanged();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void fetchData(){
+        asyncJSONRequest = new AsyncJSONRequest(this);
+        asyncJSONRequest.execute(getUrl());
+    }
+
+    public void refreshData() {
+        mImages.clear();
+        if(mListView.getAdapter() != null)
+            ((ImageListAdapter) mListView.getAdapter()).notifyDataSetChanged();
+        fetchData();
+    }
+
+    public String getUrl() {
+        String url = mBaseUrl + "?";
+
+        if(!mCategory.isEmpty())
+            url += "category="+mCategory+"&";
+        if(!mTime.isEmpty())
+            url += "time="+mTime+"&";
+        if(mOffset != 0)
+            url += "offset="+mOffset+"&";
+        if(mLength != 0)
+            url += "length="+mLength;
+
+        return url;
     }
 
     private class ImageListAdapter  extends ArrayAdapter<ImageData> {
@@ -85,9 +160,9 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
             ViewHolder viewHolder;
             ImageData imageData = this.getItem(position);
 
-            if(row==null){
+            if(row == null){
                 LayoutInflater inflater = activity.getLayoutInflater();
-                row=inflater.inflate(R.layout.list_item_browse, parent, false);
+                row = inflater.inflate(R.layout.list_item_browse, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.imageView = (AsyncImageView) row.findViewById(R.id.image);
                 viewHolder.username = (TextView) row.findViewById(R.id.username);
