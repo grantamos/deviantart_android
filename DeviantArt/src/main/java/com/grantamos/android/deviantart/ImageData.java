@@ -25,7 +25,7 @@ public class ImageData implements Serializable {
         this.superImage = new Image(jsonObject.optJSONObject("superImage"));
     }
 
-    public class Image {
+    public class Image implements Serializable {
         int width = 0;
         int height = 0;
         public String url = null;

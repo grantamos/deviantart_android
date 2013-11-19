@@ -1,7 +1,10 @@
 package com.grantamos.android.deviantart.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.DataSetObserver;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.MenuItemCompat;
@@ -17,10 +20,12 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
 import com.grantamos.android.deviantart.AsyncJSONRequest;
+import com.grantamos.android.deviantart.ImageData;
 import com.grantamos.android.deviantart.fragment.ImageListFragment;
 import com.grantamos.android.deviantart.R;
 import com.grantamos.android.deviantart.fragment.MultiExpandingListFragment;
 import com.grantamos.android.deviantart.helpers.CategoryItem;
+import com.grantamos.android.util.ImageCache;
 import com.grantamos.android.util.KTreeNode;
 
 public class BrowseActivity extends ActionBarActivity implements BrowseActivityInterface {
@@ -41,6 +46,8 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ImageCache.init();
 
         setContentView(R.layout.activity_browse);
 
@@ -200,6 +207,32 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         new KTreeNode<CategoryItem>(new CategoryItem("Scraps", "scraps"), root);
 
         return root;
+    }
+
+    public void onImageClick(View view, ImageData imageData) {
+        Intent imageDetailIntent = new Intent(this, ImageDetailActivity.class);
+        imageDetailIntent.putExtra("imageData", imageData);
+
+        int[] screenLocation = new int[2];
+        view.getLocationOnScreen(screenLocation);
+
+        imageDetailIntent.putExtra("left", screenLocation[0]);
+        imageDetailIntent.putExtra("top", screenLocation[1]);
+        imageDetailIntent.putExtra("width", view.getWidth());
+        imageDetailIntent.putExtra("height", view.getHeight());
+        //imageDetailIntent.putExtra("screenshot", loadBitmapFromView(mImageListFragment.getView()));
+
+        startActivity(imageDetailIntent);
+
+        overridePendingTransition(0, 0);
+    }
+
+    public static Bitmap loadBitmapFromView(View v) {
+        Bitmap b = Bitmap.createBitmap(v.getWidth()/4, v.getHeight()/4, Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(b);
+        //v.layout(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+        v.draw(c);
+        return b;
     }
 
     public void onCategorySelected(CategoryItem categoryItem){

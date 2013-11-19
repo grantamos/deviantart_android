@@ -52,6 +52,8 @@ public class AsyncJSONRequest extends AsyncTask<String, Void, String> {
                 outputStream.write(b, 0, len);
 
             jsonString = new String(outputStream.toByteArray());
+
+            httpURLConnection.disconnect();
         }catch (Exception e){
             Log.e("DeviantArt", e.toString());
         }

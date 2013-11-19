@@ -16,6 +16,8 @@ import com.grantamos.android.deviantart.AsyncJSONRequest;
 import com.grantamos.android.deviantart.ImageData;
 import com.grantamos.android.deviantart.JSONCallback;
 import com.grantamos.android.deviantart.R;
+import com.grantamos.android.deviantart.activity.BrowseActivity;
+import com.grantamos.android.deviantart.activity.BrowseActivityInterface;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +34,7 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
     ListView mListView;
     ArrayList<ImageData> mImages;
     ImageListAdapter mImageListAdapter;
+    BrowseActivityInterface onClickHandler;
 
     public String getCategory() { return mCategory; }
     public void setCategory(String category) { mCategory = category; }
@@ -40,7 +43,7 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
 
     public ImageListFragment(){}
 
-    public static ImageListFragment newInstance(String baseUrl,String category, String time, int offset, int length){
+    public static ImageListFragment newInstance(String baseUrl, String category, String time, int offset, int length){
         ImageListFragment imageListFragment = new ImageListFragment();
         Bundle bundle = new Bundle();
         bundle.putString("baseUrl", baseUrl);
@@ -86,6 +89,18 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
             fetchData();
 
         return mListView;
+    }
+
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        onClickHandler = (BrowseActivity) activity;
+    }
+
+    @Override
+    public void onListItemClick(ListView listView, View view, int position, long id){
+        if(onClickHandler != null)
+            onClickHandler.onImageClick(((ImageListAdapter.ViewHolder)view.getTag()).imageView, (ImageData)listView.getItemAtPosition(position));
     }
 
     public void setArguments(Bundle arguments){
@@ -170,6 +185,7 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
                 row.setTag(viewHolder);
             }else{
                 viewHolder = (ViewHolder)row.getTag();
+                viewHolder.imageView.setImageDrawable(null);
             }
 
             viewHolder.imageView.setURL(imageData.thumb.url);

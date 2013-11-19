@@ -2,6 +2,8 @@ package com.grantamos.android.deviantart;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -41,8 +43,11 @@ public class AsyncImageView extends ScalableImageView {
         }
 
         if(downloadAllowed()){
+            if(getDrawable() == null)
+                this.setImageResource(R.drawable.placeholder);
+
             AsyncImageTask asyncImageTask = new AsyncImageTask(this);
-            DownloadableImageDrawable imageDrawable = new DownloadableImageDrawable(asyncImageTask, this.getResources());
+            DownloadableImageDrawable imageDrawable = new DownloadableImageDrawable(getResources(), ((BitmapDrawable) getDrawable()).getBitmap(), asyncImageTask);
             this.setImageDrawable(imageDrawable);
             asyncImageTask.execute(imageURL);
         }

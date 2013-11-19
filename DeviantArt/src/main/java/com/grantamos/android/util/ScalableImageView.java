@@ -47,7 +47,7 @@ public class ScalableImageView extends ImageView {
                 return;
             }
         }else if(widthMode != MeasureSpec.UNSPECIFIED && heightMode != MeasureSpec.UNSPECIFIED){
-            scaleToWidth = (iWidth/width > iHeight/height);
+            scaleToWidth = (iWidth/width >= iHeight/height);
         }
 
         if(scaleToWidth){

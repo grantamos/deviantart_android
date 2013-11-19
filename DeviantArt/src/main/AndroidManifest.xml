@@ -21,6 +21,17 @@
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@style/LoginTheme" >
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.BrowseActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.BrowseActivity"
-            android:label="@string/app_name" >
+            android:name=".activity.ImageDetailActivity" >
             <intent-filter>
             </intent-filter>
         </activity>
