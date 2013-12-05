@@ -1,59 +1,47 @@
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ImageDetailActivity"
-    android:id="@+id/image_detail_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentBottom="true">
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/black">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/detail_image_view"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/backgroundImage" />
+    <ImageView
+        android:id="@+id/user_icon_image_view"
+        android:layout_width="@dimen/user_icon_size"
+        android:layout_height="@dimen/user_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/user_icon_margin"/>
 
-        <com.grantamos.android.deviantart.AsyncImageView
-            android:id="@+id/detail_image_view"
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/browse_list_view_padding"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/user_icon_image_view"
+        android:paddingLeft="@dimen/browse_list_view_padding"
+        android:paddingRight="@dimen/browse_list_view_padding"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/accent"/>
 
-        <com.grantamos.android.deviantart.AsyncImageView
-            android:id="@+id/user_icon_image_view"
-            android:layout_width="@dimen/user_icon_size"
-            android:layout_height="@dimen/user_icon_size"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/detail_image_view"
-            android:layout_margin="@dimen/user_icon_margin"/>
+    <TextView
+        android:id="@+id/username"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/user_icon_image_view"
+        android:paddingLeft="@dimen/browse_list_view_padding"
+        android:paddingRight="@dimen/browse_list_view_padding"
+        android:paddingBottom="@dimen/browse_list_view_padding"
+        android:textAllCaps="true"
+        android:textColor="@color/accent"/>
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/detail_image_view"
-            android:layout_toRightOf="@id/user_icon_image_view"
-            android:paddingLeft="@dimen/browse_list_view_padding"
-            android:paddingRight="@dimen/browse_list_view_padding"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:textColor="@color/accent"/>
-
-        <TextView
-            android:id="@+id/username"
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:layout_below="@id/title"
-            android:layout_toRightOf="@id/user_icon_image_view"
-            android:paddingLeft="@dimen/browse_list_view_padding"
-            android:paddingRight="@dimen/browse_list_view_padding"
-            android:paddingBottom="@dimen/browse_list_view_padding"
-            android:textAllCaps="true"
-            android:textColor="@color/accent"/>
-
-    </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

@@ -208,26 +208,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         Intent imageDetailIntent = new Intent(this, ImageDetailActivity.class);
         imageDetailIntent.putExtra("imageData", imageData);
 
-        int[] screenLocation = new int[2];
-        view.getLocationOnScreen(screenLocation);
-
-        imageDetailIntent.putExtra("left", screenLocation[0]);
-        imageDetailIntent.putExtra("top", screenLocation[1]);
-        imageDetailIntent.putExtra("width", view.getWidth());
-        imageDetailIntent.putExtra("height", view.getHeight());
-        //imageDetailIntent.putExtra("screenshot", loadBitmapFromView(mImageListFragment.getView()));
-
         startActivity(imageDetailIntent);
-
-        overridePendingTransition(0, 0);
-    }
-
-    public static Bitmap loadBitmapFromView(View v) {
-        Bitmap b = Bitmap.createBitmap(v.getWidth()/4, v.getHeight()/4, Bitmap.Config.ARGB_8888);
-        Canvas c = new Canvas(b);
-        //v.layout(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
-        v.draw(c);
-        return b;
     }
 
     public void onCategorySelected(CategoryItem categoryItem){

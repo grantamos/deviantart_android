@@ -1,36 +1,34 @@
 package com.grantamos.android.deviantart.activity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewTreeObserver;
-import android.view.animation.AnimationSet;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.grantamos.android.deviantart.R;
 import com.grantamos.android.deviantart.model.Image;
+import com.grantamos.android.util.ScalableImageView;
+import com.grantamos.android.util.VolleyHelper;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class ImageDetailActivity extends Activity {
 
     Image imageData = null;
 
-    int thumbLeft, thumbTop, thumbWidth, thumbHeight;
-    int animationDuration = 200;
-    float thumbScaleX, thumbScaleY;
-
     ImageView imageView;
     TextView usernameTextView;
     TextView titleTextView;
     ImageView userIconImageView;
-    View rootView;
-    ImageView backgroundView;
-    Bitmap screenshot;
+
+    PhotoViewAttacher mAttacher;
+
+    private ImageLoader mImageLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,21 +37,15 @@ public class ImageDetailActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             imageData = (Image) extras.get("imageData");
-            thumbLeft = extras.getInt("left");
-            thumbTop = extras.getInt("top");
-            thumbWidth = extras.getInt("width");
-            thumbHeight = extras.getInt("height");
-            screenshot = extras.getParcelable("screenshot");
         }
 
         if(imageData == null)
             finish();
 
+        mImageLoader = VolleyHelper.getInstance(getApplicationContext()).getImagerLoader();
+
         setContentView(R.layout.activity_image_detail);
         setupViews();
-
-        if(savedInstanceState == null)
-            setupAnimation();
     }
 
     @Override
@@ -75,18 +67,13 @@ public class ImageDetailActivity extends Activity {
         userIconImageView = (ImageView) findViewById(R.id.user_icon_image_view);
         usernameTextView = (TextView) findViewById(R.id.username);
         titleTextView = (TextView) findViewById(R.id.title);
-        rootView = findViewById(R.id.image_detail_scrollview);
-        backgroundView = (ImageView) findViewById(R.id.backgroundImage);
 
-        //backgroundView.setImageBitmap(screenshot);
+        mAttacher = new PhotoViewAttacher(imageView);
 
-        /*
-        imageView.setURL(imageData.thumb.url);
-        imageView.downloadImage();
+        mImageLoader.get(imageData.thumb.url, getImageListener(imageView, 0, 0));
 
-        if(imageData.image != null){
-            imageView.setURL(imageData.image.url);
-            imageView.downloadImage();
+        if(imageData.image.url != null){
+            mImageLoader.get(imageData.image.url, getImageListener(imageView, 0, 0));
         }
 
         if(imageData.title != null)
@@ -95,62 +82,29 @@ public class ImageDetailActivity extends Activity {
         if(imageData.user.username != null)
             usernameTextView.setText(imageData.user.username);
 
-        if(imageData.user.usericon != null){
-            userIconImageView.setURL(imageData.user.usericon);
-            userIconImageView.downloadImage();
+        if(imageData.user.userIcon != null){
+            mImageLoader.get(imageData.user.userIcon, ImageLoader.getImageListener(userIconImageView, 0, 0));
         }
-        */
     }
 
-    public void setupAnimation(){
-        ViewTreeObserver viewTreeObserver = imageView.getViewTreeObserver();
-        if (viewTreeObserver != null) {
-            viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-                @Override
-                public boolean onPreDraw() {
-                    imageView.getViewTreeObserver().removeOnPreDrawListener(this);
-
-                    thumbScaleX = thumbWidth * 1f / imageView.getWidth();
-                    thumbScaleY = thumbHeight * 1f / imageView.getHeight();
-
-                    animate();
-
-                    return true;
+    public ImageLoader.ImageListener getImageListener(final ImageView view, final int defaultImageResId, final int errorImageResId){
+        return new ImageLoader.ImageListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (errorImageResId != 0) {
+                    view.setImageResource(errorImageResId);
                 }
-            });
-        }
-    }
+            }
 
-    @SuppressLint("NewApi")
-    public void animate() {
-        int[] screenLocation = new int[2];
-        imageView.getLocationOnScreen(screenLocation);
-
-        if(isRuntimePostGingerbread()){
-            imageView.setPivotX(0);
-            imageView.setPivotY(0);
-            imageView.setScaleX(thumbScaleX);
-            imageView.setScaleY(thumbScaleY);
-            imageView.setTranslationX(thumbLeft - screenLocation[0]);
-            imageView.setTranslationY(thumbTop - screenLocation[1]);
-
-            imageView.animate()
-                    .scaleX(1)
-                    .scaleY(1)
-                    .translationX(0)
-                    .translationY(0)
-                    .setDuration(animationDuration);
-        } else {
-            AnimationSet set = new AnimationSet(true);
-
-            TranslateAnimation moveAnim = new TranslateAnimation(thumbLeft - screenLocation[0], 0, thumbTop - screenLocation[1], 0);
-            set.addAnimation(moveAnim);
-
-            ScaleAnimation scaleAnimation = new ScaleAnimation(thumbScaleX, 1, thumbScaleY, 1);
-            set.addAnimation(scaleAnimation);
-
-            set.setDuration(animationDuration);
-            imageView.startAnimation(set);
-        }
+            @Override
+            public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
+                if (response.getBitmap() != null) {
+                    view.setImageBitmap(response.getBitmap());
+                    mAttacher.update();
+                } else if (defaultImageResId != 0) {
+                    view.setImageResource(defaultImageResId);
+                }
+            }
+        };
     }
 }

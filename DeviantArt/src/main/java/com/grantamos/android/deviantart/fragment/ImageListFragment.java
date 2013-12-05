@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,6 +23,8 @@ import com.grantamos.android.deviantart.model.Image;
 import com.grantamos.android.deviantart.model.Stream;
 import com.grantamos.android.util.GsonRequest;
 import com.grantamos.android.util.LruBitmapCache;
+import com.grantamos.android.util.ScalableImageView;
+import com.grantamos.android.util.VolleyHelper;
 
 import java.util.ArrayList;
 
@@ -68,8 +69,10 @@ public class ImageListFragment extends ListFragment {
             setArguments(savedInstanceState);
         }
 
-        mRequestQueue = Volley.newRequestQueue(getActivity());
-        mImageLoader = new ImageLoader(mRequestQueue, new LruBitmapCache((int) Runtime.getRuntime().maxMemory() / 1024 / 8));
+        VolleyHelper volleyHelper = VolleyHelper.getInstance(getActivity().getApplicationContext());
+
+        mRequestQueue = volleyHelper.getRequestQueue();
+        mImageLoader = volleyHelper.getImagerLoader();
         mStream = new Stream();
 
         getStream(mUrl);
@@ -79,7 +82,6 @@ public class ImageListFragment extends ListFragment {
     public void onStop() {
 
         super.onStop();
-
         mRequestQueue.cancelAll(getActivity());
     }
 
@@ -158,6 +160,8 @@ public class ImageListFragment extends ListFragment {
 
         Activity activity;
 
+        int FADE_IN_TIME = 500;
+
         public ImageListAdapter(Context context, int textViewResourceId, ArrayList<Image> items) {
             super(context, textViewResourceId, items);
             this.activity = (Activity)context;
@@ -173,7 +177,7 @@ public class ImageListFragment extends ListFragment {
                 LayoutInflater inflater = activity.getLayoutInflater();
                 row = inflater.inflate(R.layout.list_item_browse, parent, false);
                 viewHolder = new ViewHolder();
-                viewHolder.imageView = (ImageView) row.findViewById(R.id.image);
+                viewHolder.imageView = (ScalableImageView) row.findViewById(R.id.image);
                 viewHolder.username = (TextView) row.findViewById(R.id.username);
                 viewHolder.title = (TextView) row.findViewById(R.id.title);
                 row.setTag(viewHolder);
@@ -182,6 +186,8 @@ public class ImageListFragment extends ListFragment {
                 viewHolder.imageView.setImageDrawable(null);
             }
 
+            viewHolder.imageView.imageHeight = image.thumb.height;
+            viewHolder.imageView.imageWidth = image.thumb.width;
             viewHolder.url = image.thumb.url;
             viewHolder.username.setText(image.user.username);
             viewHolder.title.setText(image.title);
@@ -189,13 +195,33 @@ public class ImageListFragment extends ListFragment {
             if(viewHolder.imageContainer != null)
                 viewHolder.imageContainer.cancelRequest();
 
-            viewHolder.imageContainer = mImageLoader.get(viewHolder.url, mImageLoader.getImageListener(viewHolder.imageView, R.drawable.placeholder, R.drawable.placeholder));
+            viewHolder.imageContainer = mImageLoader.get(viewHolder.url, getImageListener(viewHolder.imageView, 0, 0));
 
             return row;
         }
 
+        public ImageListener getImageListener(final ScalableImageView view, final int defaultImageResId, final int errorImageResId){
+            return new ImageListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    if (errorImageResId != 0) {
+                        view.setImageResource(errorImageResId);
+                    }
+                }
+
+                @Override
+                public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
+                    if (response.getBitmap() != null) {
+                        view.setImageBitmap(response.getBitmap(), isImmediate ? 0 : 500);
+                    } else if (defaultImageResId != 0) {
+                        view.setImageResource(defaultImageResId);
+                    }
+                }
+            };
+        }
+
         class ViewHolder {
-            ImageView imageView;
+            ScalableImageView imageView;
             String url;
             TextView title, username;
             ImageLoader.ImageContainer imageContainer;

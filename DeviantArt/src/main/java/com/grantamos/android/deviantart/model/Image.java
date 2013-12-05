@@ -22,7 +22,23 @@ public class Image implements Serializable {
 
     public List<Comment> comments;
 
-    public class ImageData {
+    public float widthScale() {
+        if(image != null){
+            return ((float) thumb.width) / thumb.height;
+        }
+
+        return 1;
+    }
+
+    public float heightScale() {
+        if(image != null){
+            return ((float) thumb.height) / thumb.width;
+        }
+
+        return 1;
+    }
+
+    public class ImageData implements Serializable {
 
         public String url;
 
