@@ -1,56 +1,60 @@
 package com.grantamos.android.deviantart.fragment;
 
 import android.app.Activity;
-import android.support.v4.app.ListFragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.grantamos.android.deviantart.AsyncImageView;
-import com.grantamos.android.deviantart.AsyncJSONRequest;
-import com.grantamos.android.deviantart.ImageData;
-import com.grantamos.android.deviantart.JSONCallback;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.Volley;
 import com.grantamos.android.deviantart.R;
 import com.grantamos.android.deviantart.activity.BrowseActivity;
-import com.grantamos.android.deviantart.activity.BrowseActivityInterface;
-
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.grantamos.android.deviantart.helpers.BrowseActivityInterface;
+import com.grantamos.android.deviantart.model.Image;
+import com.grantamos.android.deviantart.model.Stream;
+import com.grantamos.android.util.GsonRequest;
+import com.grantamos.android.util.LruBitmapCache;
 
 import java.util.ArrayList;
+
+import static com.android.volley.toolbox.ImageLoader.ImageListener;
 
 /**
  * Created by Grant on 11/4/13.
  */
-public class ImageListFragment extends ListFragment implements JSONCallback {
-    String mBaseUrl, mCategory, mTime, mJson;
-    int mOffset, mLength;
-    AsyncJSONRequest asyncJSONRequest;
-    ListView mListView;
-    ArrayList<ImageData> mImages;
-    ImageListAdapter mImageListAdapter;
-    BrowseActivityInterface onClickHandler;
+public class ImageListFragment extends ListFragment {
 
-    public String getCategory() { return mCategory; }
-    public void setCategory(String category) { mCategory = category; }
+    private Stream mStream;
 
-    public void setTime(String time) { this.mTime = time; }
+    private ListView mListView;
+
+    private ImageListAdapter mImageListAdapter;
+
+    private BrowseActivityInterface onClickHandler;
+
+    private RequestQueue mRequestQueue;
+
+    private ImageLoader mImageLoader;
+
+    private String mUrl;
 
     public ImageListFragment(){}
 
-    public static ImageListFragment newInstance(String baseUrl, String category, String time, int offset, int length){
+    public static ImageListFragment newInstance(String url){
+
         ImageListFragment imageListFragment = new ImageListFragment();
         Bundle bundle = new Bundle();
-        bundle.putString("baseUrl", baseUrl);
-        bundle.putString("category", category);
-        bundle.putString("time", time);
-        bundle.putInt("offset", offset);
-        bundle.putInt("length", length);
+        bundle.putString("url", url);
         imageListFragment.setArguments(bundle);
 
         return imageListFragment;
@@ -63,30 +67,39 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
         if(savedInstanceState != null){
             setArguments(savedInstanceState);
         }
+
+        mRequestQueue = Volley.newRequestQueue(getActivity());
+        mImageLoader = new ImageLoader(mRequestQueue, new LruBitmapCache((int) Runtime.getRuntime().maxMemory() / 1024 / 8));
+        mStream = new Stream();
+
+        getStream(mUrl);
+    }
+
+    @Override
+    public void onStop() {
+
+        super.onStop();
+
+        mRequestQueue.cancelAll(getActivity());
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState){
+
         super.onSaveInstanceState(outState);
 
-        outState.putString("baseUrl", mBaseUrl);
-        outState.putString("category", mCategory);
-        outState.putString("time", mTime);
-        outState.putInt("offset", mOffset);
-        outState.putInt("length", mLength);
-        outState.putString("json", mJson);
+        outState.putString("url", mUrl);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         mListView = (ListView) inflater.inflate(R.layout.list_view_image, container, false);
 
-        if(mJson != null && !mJson.isEmpty())
-            consumeJSON(mJson);
-        else
-            fetchData();
+        mImageListAdapter = new ImageListAdapter(getActivity(), 0, mStream.data);
+        mListView.setAdapter(mImageListAdapter);
 
         return mListView;
     }
@@ -100,71 +113,52 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id){
         if(onClickHandler != null)
-            onClickHandler.onImageClick(((ImageListAdapter.ViewHolder)view.getTag()).imageView, (ImageData)listView.getItemAtPosition(position));
+            onClickHandler.onImageClick(((ImageListAdapter.ViewHolder)view.getTag()).imageView, (Image)listView.getItemAtPosition(position));
     }
 
     public void setArguments(Bundle arguments){
-        mBaseUrl = arguments.getString("baseUrl");
-        mCategory = arguments.getString("category");
-        mTime = arguments.getString("time");
-        mOffset = arguments.getInt("offset");
-        mLength = arguments.getInt("length");
-        mJson = arguments.getString("json");
-    }
-
-    public void consumeJSON(String json){
-        mJson = json;
-
-        try {
-            JSONArray jsonArray = new JSONArray(mJson);
-
-            if(mImageListAdapter == null){
-                mImages = new ArrayList<ImageData>();
-                mImageListAdapter = new ImageListAdapter(getActivity(), 0, mImages);
-                mListView.setAdapter(mImageListAdapter);
-            }
-
-            for(int i = 0; i < jsonArray.length(); i++)
-                mImages.add(new ImageData(jsonArray.getJSONObject(i)));
-
-            mImageListAdapter.notifyDataSetChanged();
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void fetchData(){
-        asyncJSONRequest = new AsyncJSONRequest(this);
-        asyncJSONRequest.execute(getUrl());
+        mUrl = arguments.getString("url");
     }
 
     public void refreshData() {
-        mImages.clear();
-        if(mListView.getAdapter() != null)
-            ((ImageListAdapter) mListView.getAdapter()).notifyDataSetChanged();
-        fetchData();
+
+        mStream.clear();
+
+        getStream(mUrl);
     }
 
-    public String getUrl() {
-        String url = mBaseUrl + "?";
+    public void getStream(String url) {
 
-        if(!mCategory.isEmpty())
-            url += "category="+mCategory+"&";
-        if(!mTime.isEmpty())
-            url += "time="+mTime+"&";
-        if(mOffset != 0)
-            url += "offset="+mOffset+"&";
-        if(mLength != 0)
-            url += "length="+mLength;
 
-        return url;
+        Response.Listener responseListener = new Response.Listener<Stream>() {
+            @Override
+            public void onResponse(Stream stream) {
+
+                mStream.append(stream);
+
+                if(mListView != null)
+                    ((ArrayAdapter)mListView.getAdapter()).notifyDataSetChanged();
+            }
+        };
+
+        GsonRequest<Stream> gsonRequest = new GsonRequest<Stream>(url, Stream.class, null, responseListener, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        });
+        mRequestQueue.add(gsonRequest);
     }
 
-    private class ImageListAdapter  extends ArrayAdapter<ImageData> {
+    public void setUrl(String url) {
+        this.mUrl = url;
+    }
+
+    private class ImageListAdapter  extends ArrayAdapter<Image> {
+
         Activity activity;
 
-        public ImageListAdapter(Context context, int textViewResourceId, ArrayList<ImageData> items) {
+        public ImageListAdapter(Context context, int textViewResourceId, ArrayList<Image> items) {
             super(context, textViewResourceId, items);
             this.activity = (Activity)context;
         }
@@ -173,13 +167,13 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
         public View getView(int position, View convertView, ViewGroup parent){
             View row = convertView;
             ViewHolder viewHolder;
-            ImageData imageData = this.getItem(position);
+            Image image = this.getItem(position);
 
             if(row == null){
                 LayoutInflater inflater = activity.getLayoutInflater();
                 row = inflater.inflate(R.layout.list_item_browse, parent, false);
                 viewHolder = new ViewHolder();
-                viewHolder.imageView = (AsyncImageView) row.findViewById(R.id.image);
+                viewHolder.imageView = (ImageView) row.findViewById(R.id.image);
                 viewHolder.username = (TextView) row.findViewById(R.id.username);
                 viewHolder.title = (TextView) row.findViewById(R.id.title);
                 row.setTag(viewHolder);
@@ -188,17 +182,23 @@ public class ImageListFragment extends ListFragment implements JSONCallback {
                 viewHolder.imageView.setImageDrawable(null);
             }
 
-            viewHolder.imageView.setURL(imageData.thumb.url);
-            viewHolder.imageView.downloadImage();
-            viewHolder.username.setText(imageData.username);
-            viewHolder.title.setText(imageData.title);
+            viewHolder.url = image.thumb.url;
+            viewHolder.username.setText(image.user.username);
+            viewHolder.title.setText(image.title);
+
+            if(viewHolder.imageContainer != null)
+                viewHolder.imageContainer.cancelRequest();
+
+            viewHolder.imageContainer = mImageLoader.get(viewHolder.url, mImageLoader.getImageListener(viewHolder.imageView, R.drawable.placeholder, R.drawable.placeholder));
 
             return row;
         }
 
-        class ViewHolder{
-            AsyncImageView imageView;
+        class ViewHolder {
+            ImageView imageView;
+            String url;
             TextView title, username;
+            ImageLoader.ImageContainer imageContainer;
         }
     }
 }

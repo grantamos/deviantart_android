@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
 
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string-array name="time">
@@ -14,7 +14,7 @@
         <item name="one_month">MONTH</item>
         <item name="all_time">ALL</item>
     </string-array>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <attr name="actionBarDivider" format="reference" />
@@ -91,7 +91,7 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="accent">#c6da2b</color>
@@ -108,7 +108,7 @@
     <color name="transparent_half_white">#88FFFFFF</color>
     <color name="transparent_quarter_white">#44FFFFFF</color>
     <color name="white">#ffffffff</color>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="ActionBar">
@@ -215,7 +215,7 @@
         <!-- Present the text in ALL CAPS. This may use a small-caps form when available. -->
         <attr name="textAllCaps" format="reference|boolean" />
     </declare-styleable>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportGridlayoutV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportGridlayoutV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="GridLayout">
@@ -401,7 +401,7 @@
             <flag name="end" value="0x00800005" />
         </attr>
     </declare-styleable>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="LinearLayoutICS">
@@ -702,7 +702,7 @@
     <dimen name="abc_panel_menu_list_width">296dp</dimen>
     <dimen name="abc_search_view_preferred_width">320dip</dimen>
     <dimen name="abc_search_view_text_min_width">160dip</dimen>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -710,11 +710,11 @@
     <dimen name="browse_list_view_margin_horizontal">16dp</dimen>
     <dimen name="browse_list_view_margin_vertical">8dp</dimen>
     <dimen name="browse_list_view_padding">10dp</dimen>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportGridlayoutV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportGridlayoutV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <dimen name="default_gap">16dip</dimen>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="deviant_art_login_margin">40dp</dimen>
@@ -726,7 +726,7 @@
     <dimen name="top_bar_padding">5dp</dimen>
     <dimen name="user_icon_margin">10dp</dimen>
     <dimen name="user_icon_size">80dp</dimen>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <item name="action_bar_activity_content" type="id"/>
@@ -749,7 +749,7 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="action_settings">Settings</string>
@@ -757,7 +757,7 @@
     <string name="drawer_closed">DeviantArt</string>
     <string name="drawer_open">Category</string>
     <string name="title_activity_image_detail">ImageDetailActivity</string>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppTheme" parent="Theme.AppCompat">
@@ -786,7 +786,7 @@
         <item name="android:textColor">@color/white</item>
         <!-- The textColor property is backward compatible with the Support Library -->
     </style>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">
@@ -907,7 +907,7 @@
     </style>
 
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="TextAppearance.Widget.AppCompat.Base.ExpandedMenu.Item" />
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="TextOnlyButton">
@@ -922,7 +922,7 @@
         <item name="android:gravity">left|center_vertical</item>
         <item name="android:paddingLeft">@dimen/browse_list_view_margin_horizontal</item>
     </style>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <style name="Theme.AppCompat" parent="Theme.Base.AppCompat">
@@ -1172,7 +1172,7 @@
     </style>
 
     <style name="Theme.Base.Light" parent="android:Theme.Light" />
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="TopBarDropdownStyle">
@@ -1180,7 +1180,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/top_bar_dropdown_background</item>
     </style>
-    <!-- From: file:/C:/Developer/android/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
+    <!-- From: file:/C:/Users/granta/Developer/github/deviantart_android/DeviantArt/build/exploded-bundles/ComAndroidSupportAppcompatV71800.aar/res/values/values.xml -->
     <eat-comment />
 
     <style name="Widget.AppCompat.ActionBar" parent="Widget.AppCompat.Base.ActionBar" />

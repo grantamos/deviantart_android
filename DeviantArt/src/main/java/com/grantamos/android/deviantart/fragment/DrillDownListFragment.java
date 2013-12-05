@@ -7,13 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.grantamos.android.deviantart.R;
-import com.grantamos.android.deviantart.activity.BrowseActivityInterface;
+import com.grantamos.android.deviantart.helpers.BrowseActivityInterface;
 import com.grantamos.android.deviantart.adapter.DrillDownArrayAdapter;
 import com.grantamos.android.deviantart.helpers.CategoryItem;
 import com.grantamos.android.util.KTreeNode;

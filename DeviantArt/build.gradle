@@ -23,7 +23,10 @@ android {
 }
 
 dependencies {
-	compile 'com.android.support:appcompat-v7:18.0.0'
-	compile 'com.android.support:gridlayout-v7:18.0.0'
-	compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.android.support:appcompat-v7:18.0.0'
+    compile 'com.android.support:gridlayout-v7:18.0.0'
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/volley-11-22-2013.jar')
+    compile files('libs/photoview-1.2.2.jar')
 }

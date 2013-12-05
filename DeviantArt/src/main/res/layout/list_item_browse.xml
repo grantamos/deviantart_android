@@ -16,10 +16,10 @@
         android:padding="1dp"
         android:background="@drawable/browse_list_view_item_background">
 
-        <com.grantamos.android.deviantart.AsyncImageView
+        <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
+            android:scaleType="center"
             android:id="@+id/image"/>
 
         <TextView

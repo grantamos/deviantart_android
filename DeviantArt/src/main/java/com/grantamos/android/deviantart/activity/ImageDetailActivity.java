@@ -1,9 +1,5 @@
 package com.grantamos.android.deviantart.activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -12,28 +8,26 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.AnimationSet;
-import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.grantamos.android.deviantart.AsyncImageView;
-import com.grantamos.android.deviantart.ImageData;
 import com.grantamos.android.deviantart.R;
+import com.grantamos.android.deviantart.model.Image;
 
 public class ImageDetailActivity extends Activity {
 
-    ImageData imageData = null;
+    Image imageData = null;
 
     int thumbLeft, thumbTop, thumbWidth, thumbHeight;
     int animationDuration = 200;
     float thumbScaleX, thumbScaleY;
 
-    AsyncImageView imageView;
+    ImageView imageView;
     TextView usernameTextView;
     TextView titleTextView;
-    AsyncImageView userIconImageView;
+    ImageView userIconImageView;
     View rootView;
     ImageView backgroundView;
     Bitmap screenshot;
@@ -44,7 +38,7 @@ public class ImageDetailActivity extends Activity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            imageData = (ImageData) extras.get("imageData");
+            imageData = (Image) extras.get("imageData");
             thumbLeft = extras.getInt("left");
             thumbTop = extras.getInt("top");
             thumbWidth = extras.getInt("width");
@@ -64,7 +58,7 @@ public class ImageDetailActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; this adds data to the action bar if it is present.
         //getMenuInflater().inflate(R.menu.image_detail, menu);
         return true;
     }
@@ -77,8 +71,8 @@ public class ImageDetailActivity extends Activity {
     }
 
     public void setupViews(){
-        imageView = (AsyncImageView) findViewById(R.id.detail_image_view);
-        userIconImageView = (AsyncImageView) findViewById(R.id.user_icon_image_view);
+        imageView = (ImageView) findViewById(R.id.detail_image_view);
+        userIconImageView = (ImageView) findViewById(R.id.user_icon_image_view);
         usernameTextView = (TextView) findViewById(R.id.username);
         titleTextView = (TextView) findViewById(R.id.title);
         rootView = findViewById(R.id.image_detail_scrollview);
@@ -86,6 +80,7 @@ public class ImageDetailActivity extends Activity {
 
         //backgroundView.setImageBitmap(screenshot);
 
+        /*
         imageView.setURL(imageData.thumb.url);
         imageView.downloadImage();
 
@@ -97,13 +92,14 @@ public class ImageDetailActivity extends Activity {
         if(imageData.title != null)
             titleTextView.setText(imageData.title);
 
-        if(imageData.username != null)
-            usernameTextView.setText(imageData.username);
+        if(imageData.user.username != null)
+            usernameTextView.setText(imageData.user.username);
 
-        if(imageData.userIcon != null){
-            userIconImageView.setURL(imageData.userIcon);
+        if(imageData.user.usericon != null){
+            userIconImageView.setURL(imageData.user.usericon);
             userIconImageView.downloadImage();
         }
+        */
     }
 
     public void setupAnimation(){

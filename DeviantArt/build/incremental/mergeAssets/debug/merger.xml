@@ -2,16 +2,16 @@
 <merger>
 
     <dataSet config="ComAndroidSupportGridlayoutV71800.aar" >
-        <source path="C:\Developer\android\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportGridlayoutV71800.aar\assets" />
+        <source path="C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportGridlayoutV71800.aar\assets" />
     </dataSet>
     <dataSet config="ComAndroidSupportAppcompatV71800.aar" >
-        <source path="C:\Developer\android\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\assets" />
+        <source path="C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\main\assets" />
+        <source path="C:\Users\granta\Developer\github\deviantart_android\DeviantArt\src\main\assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Developer\android\deviantart_android\DeviantArt\src\debug\assets" />
+        <source path="C:\Users\granta\Developer\github\deviantart_android\DeviantArt\src\debug\assets" />
     </dataSet>
 
 </merger>

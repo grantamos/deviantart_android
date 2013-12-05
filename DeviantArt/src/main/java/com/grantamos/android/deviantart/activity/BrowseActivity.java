@@ -2,7 +2,6 @@ package com.grantamos.android.deviantart.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.database.DataSetObserver;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
@@ -13,61 +12,57 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
-import com.grantamos.android.deviantart.AsyncJSONRequest;
-import com.grantamos.android.deviantart.ImageData;
 import com.grantamos.android.deviantart.fragment.ImageListFragment;
 import com.grantamos.android.deviantart.R;
 import com.grantamos.android.deviantart.fragment.MultiExpandingListFragment;
+import com.grantamos.android.deviantart.helpers.BrowseActivityInterface;
 import com.grantamos.android.deviantart.helpers.CategoryItem;
-import com.grantamos.android.util.ImageCache;
+import com.grantamos.android.deviantart.model.Image;
 import com.grantamos.android.util.KTreeNode;
 
 public class BrowseActivity extends ActionBarActivity implements BrowseActivityInterface {
-    AsyncJSONRequest browseRequest;
-    String baseURL = "http://ec2-54-200-105-129.us-west-2.compute.amazonaws.com:1337/v1/media/browse/";
-    String category = "";
-    String time = "8HRS";
-    int offset = 0, length = 0;
+    private String API_URL = "http://ec2-54-200-105-129.us-west-2.compute.amazonaws.com:1337/v1/media/browse/";
 
-    DrawerLayout mDrawerLayout;
-    ActionBarDrawerToggle mDrawerToggle;
-    CharSequence mDrawerTitle = "CATEGORIES";
-    ImageListFragment mImageListFragment;
-    MultiExpandingListFragment mMultiExpandingListFragment;
-    CategoryItem selectedCategory;
-    boolean shouldRefresh;
+    private String mCategory = "";
+    private String mTime = "8HRS";
+    private int mOffset = 0;
+    private int mLength = 0;
+
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private CharSequence mDrawerTitle = "CATEGORIES";
+    private ImageListFragment mImageListFragment;
+    private MultiExpandingListFragment mMultiExpandingListFragment;
+    private CategoryItem mSelectedCategory;
+    private boolean mShouldRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ImageCache.init();
-
         setContentView(R.layout.activity_browse);
 
         if (savedInstanceState == null) {
-            mImageListFragment = ImageListFragment.newInstance(baseURL, category, time, offset, length);
+            mImageListFragment = ImageListFragment.newInstance(getBrowseUrl());
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.image_list_container, mImageListFragment)
                     .commit();
 
             KTreeNode<CategoryItem> tree = setupNavigationTree();
-            selectedCategory = tree.getValue();
+            mSelectedCategory = tree.getValue();
             mMultiExpandingListFragment = MultiExpandingListFragment.newInstance(tree);
 
             getSupportFragmentManager().beginTransaction()
-                    //.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
                     .add(R.id.drawer_content, mMultiExpandingListFragment)
                     .commit();
         } else {
-            selectedCategory = (CategoryItem) savedInstanceState.getSerializable("selectedCategory");
+            mSelectedCategory = (CategoryItem) savedInstanceState.getSerializable("selectedCategory");
         }
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -81,12 +76,12 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
 
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
-                getSupportActionBar().setTitle(selectedCategory.toString());
+                getSupportActionBar().setTitle(mSelectedCategory.toString());
 
-                if(shouldRefresh)
+                if(mShouldRefresh)
                     mImageListFragment.refreshData();
 
-                shouldRefresh = false;
+                mShouldRefresh = false;
             }
 
             /** Called when a drawer has settled in a completely open state. */
@@ -101,14 +96,14 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        getSupportActionBar().setTitle(selectedCategory.toString());
+        getSupportActionBar().setTitle(mSelectedCategory.toString());
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState){
 
         super.onSaveInstanceState(outState);
-        outState.putSerializable("selectedCategory", selectedCategory);
+        outState.putSerializable("selectedCategory", mSelectedCategory);
     }
 
     @Override
@@ -131,7 +126,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; this adds data to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_browse, menu);
 
         MenuItem item = menu.findItem(R.id.action_time);
@@ -146,9 +141,9 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String newTime = adapterView.getItemAtPosition(i).toString();
-                if(newTime.compareTo(time) != 0){
-                    time = newTime;
-                    mImageListFragment.setTime(time);
+                if(newTime.compareTo(mTime) != 0){
+                    mTime = newTime;
+                    mImageListFragment.setUrl(getBrowseUrl());
                     mImageListFragment.refreshData();
                 }
             }
@@ -209,7 +204,7 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
         return root;
     }
 
-    public void onImageClick(View view, ImageData imageData) {
+    public void onImageClick(View view, Image imageData) {
         Intent imageDetailIntent = new Intent(this, ImageDetailActivity.class);
         imageDetailIntent.putExtra("imageData", imageData);
 
@@ -236,18 +231,33 @@ public class BrowseActivity extends ActionBarActivity implements BrowseActivityI
     }
 
     public void onCategorySelected(CategoryItem categoryItem){
-        if(selectedCategory == categoryItem)
+        if(mSelectedCategory == categoryItem)
             return;
 
-        selectedCategory = categoryItem;
-        category = selectedCategory.getUrlText();
+        mSelectedCategory = categoryItem;
+        mCategory = mSelectedCategory.getUrlText();
 
-        mImageListFragment.setCategory(category);
-        shouldRefresh = true;
+        mImageListFragment.setUrl(getBrowseUrl());
+        mShouldRefresh = true;
     }
 
     public void dismissDrawer(){
-        getSupportActionBar().setTitle(selectedCategory.getDisplayText());
+        getSupportActionBar().setTitle(mSelectedCategory.getDisplayText());
         mDrawerLayout.closeDrawers();
+    }
+
+    public String getBrowseUrl() {
+        String url = API_URL + "?";
+
+        if(!mCategory.isEmpty())
+            url += "category="+mCategory+"&";
+        if(!mTime.isEmpty())
+            url += "time="+mTime+"&";
+        if(mOffset != 0)
+            url += "offset="+mOffset+"&";
+        if(mLength != 0)
+            url += "length="+mLength;
+
+        return url;
     }
 }

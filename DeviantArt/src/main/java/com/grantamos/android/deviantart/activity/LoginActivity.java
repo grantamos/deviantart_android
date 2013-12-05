@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.grantamos.android.deviantart.R;
-import com.grantamos.android.util.ImageCache;
 
 /**
  * Created by Grant on 6/24/13.
