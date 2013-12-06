@@ -2,6 +2,7 @@
   <library name="photoview-1.2.2">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/DeviantArt/libs/photoview-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DeviantArt/libs/photoview-1.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -42,7 +42,7 @@ public class ImageDetailActivity extends Activity {
         if(imageData == null)
             finish();
 
-        mImageLoader = VolleyHelper.getInstance(getApplicationContext()).getImagerLoader();
+        mImageLoader = VolleyHelper.getInstance(getApplicationContext()).getImageLoader();
 
         setContentView(R.layout.activity_image_detail);
         setupViews();

@@ -72,7 +72,7 @@ public class ImageListFragment extends ListFragment {
         VolleyHelper volleyHelper = VolleyHelper.getInstance(getActivity().getApplicationContext());
 
         mRequestQueue = volleyHelper.getRequestQueue();
-        mImageLoader = volleyHelper.getImagerLoader();
+        mImageLoader = volleyHelper.getImageLoader();
         mStream = new Stream();
 
         getStream(mUrl);
