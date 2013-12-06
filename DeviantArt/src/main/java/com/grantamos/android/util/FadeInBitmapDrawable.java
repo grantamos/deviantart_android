@@ -1,6 +1,5 @@
 package com.grantamos.android.util;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -33,14 +32,11 @@ public class FadeInBitmapDrawable extends BitmapDrawable {
      */
     private int mTransitionState = TRANSITION_NONE;
 
-    private boolean mReverse;
     private long mStartTimeMillis;
     private int mFrom;
     private int mTo;
     private int mDuration;
-    private int mOriginalDuration;
     private int mAlpha = 0;
-    private boolean mCrossFade;
 
     public FadeInBitmapDrawable(Resources resources, Bitmap bitmap, int duration) {
 
@@ -57,8 +53,7 @@ public class FadeInBitmapDrawable extends BitmapDrawable {
         mFrom = 0;
         mTo = 255;
         mAlpha = 0;
-        mDuration = mOriginalDuration = durationMillis;
-        mReverse = false;
+        mDuration = durationMillis;
         mTransitionState = TRANSITION_STARTING;
         invalidateSelf();
     }

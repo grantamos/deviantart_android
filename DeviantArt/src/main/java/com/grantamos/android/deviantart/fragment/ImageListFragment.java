@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.WrapperListAdapter;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -100,6 +101,8 @@ public class ImageListFragment extends ListFragment {
         // Inflate the layout for this fragment
         mListView = (ListView) inflater.inflate(R.layout.list_view_image, container, false);
 
+        mListView.addFooterView(inflater.inflate(R.layout.list_view_loading_footer, null, false));
+
         mImageListAdapter = new ImageListAdapter(getActivity(), 0, mStream.data);
         mListView.setAdapter(mImageListAdapter);
 
@@ -131,7 +134,6 @@ public class ImageListFragment extends ListFragment {
 
     public void getStream(String url) {
 
-
         Response.Listener responseListener = new Response.Listener<Stream>() {
             @Override
             public void onResponse(Stream stream) {
@@ -139,7 +141,7 @@ public class ImageListFragment extends ListFragment {
                 mStream.append(stream);
 
                 if(mListView != null)
-                    ((ArrayAdapter)mListView.getAdapter()).notifyDataSetChanged();
+                    ((ArrayAdapter)((WrapperListAdapter)mListView.getAdapter()).getWrappedAdapter()).notifyDataSetChanged();
             }
         };
 
@@ -169,6 +171,11 @@ public class ImageListFragment extends ListFragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
+
+            if(position == getCount() - 1 && mStream.next != null && !mStream.next.isEmpty()){
+                getStream(mStream.next);
+            }
+
             View row = convertView;
             ViewHolder viewHolder;
             Image image = this.getItem(position);
