@@ -1,11 +1,13 @@
 package com.grantamos.android.deviantart.activity;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -87,6 +89,9 @@ public class ImageDetailActivity extends Activity {
 
         if(imageData.user.username != null)
             usernameTextView.setText(imageData.user.username);
+
+        //Bitmap userIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.user_icon_placeholder);
+        //userIconImageView.setBackgroundDrawable(new BitmapDrawable(getCroppedBitmap(userIconBitmap)));
 
         if(imageData.user.userIcon != null){
             mImageLoader.get(imageData.user.userIcon, getCroppedImageListener(userIconImageView, 0, 0));

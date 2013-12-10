@@ -91,7 +91,16 @@
       <file leaf-file-name="ImageDetailActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/ImageDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="21" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.6516854" vertical-offset="1420" max-vertical-offset="2414">
+            <state line="92" column="10" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.49836066" vertical-offset="869" max-vertical-offset="2465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/ImageListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="198" column="59" selection-start="6307" selection-end="6307" vertical-scroll-proportion="0.0" vertical-offset="2394" max-vertical-offset="3689">
               <folding />
             </state>
           </provider>
@@ -839,13 +848,13 @@
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_item_browse.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/VolleyHelper.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/FadeInImageDrawable.java" />
-        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/FadeInBitmapDrawable.java" />
-        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/ScalableImageView.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/activity_image_detail.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/drawable/image_detail_header.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/drawable/user_icon_background.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_loading_footer.xml" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/ImageListFragment.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/FadeInBitmapDrawable.java" />
+        <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/ScalableImageView.java" />
         <option value="$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/ImageDetailActivity.java" />
       </list>
     </option>
@@ -882,7 +891,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -989,66 +997,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DeviantArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deviantart_android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DeviantArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DeviantArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deviantart_android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DeviantArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1108,10 +1056,6 @@
               <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1181,13 +1125,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="fragment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1279,6 +1224,19 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1304,19 +1262,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1463,22 +1408,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39736554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39649507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231106" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32201535" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3852909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3033954" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1486,11 +1430,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15048026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3227223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32201535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32381997" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1522,11 +1467,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_drawer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.18579236" vertical-offset="0" max-vertical-offset="549" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/DrillDownListFragment.java">
@@ -1555,11 +1500,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/spinner_time.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="32" selection-start="221" selection-end="221" vertical-scroll-proportion="0.15482695" vertical-offset="0" max-vertical-offset="549" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/menu/menu_browse.xml">
@@ -1643,16 +1588,11 @@
         <state line="13" column="16" selection-start="390" selection-end="390" vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="530" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/DeviantArt/libs/volley-11-22-2013.jar!/com/android/volley/toolbox/ImageLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="136" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="1411" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/drawable/list_item_background.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -1707,9 +1647,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deviantart_android.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/LruBitmapCache.java">
@@ -1730,24 +1668,6 @@
             <element signature="e#897#898#0" expanded="false" />
             <element signature="e#940#941#0" expanded="false" />
             <element signature="e#980#981#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/FadeInBitmapDrawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/ScalableImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="414" selection-end="414" vertical-scroll-proportion="0.54018694" vertical-offset="0" max-vertical-offset="1377">
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1781,26 +1701,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/activity_image_detail.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state line="47" column="63" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1020">
           <folding>
-            <element signature="e#1079#1104#0" expanded="true" />
-            <element signature="e#1144#1169#0" expanded="true" />
+            <element signature="e#1079#1104#0" expanded="false" />
+            <element signature="e#1144#1169#0" expanded="false" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_item_browse.xml">
-      <provider editor-type-id="android-designer">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_item_browse.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="12" selection-start="1550" selection-end="1583" vertical-scroll-proportion="0.56666666" vertical-offset="306" max-vertical-offset="918">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/GsonRequest.java">
@@ -1811,23 +1731,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/activity_browse.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state line="6" column="36" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="493">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/ImageListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="33" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.8426966" vertical-offset="978" max-vertical-offset="3553">
-          <folding>
-            <element signature="e#3943#4279#0" expanded="true" />
-            <element signature="e#4268#4269#0" expanded="true" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/BrowseActivity.java">
@@ -1838,18 +1748,48 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/res/layout/list_view_loading_footer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="620" selection-end="620" vertical-scroll-proportion="0.56777996" vertical-offset="0" max-vertical-offset="509">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/DeviantArt/libs/volley-11-22-2013.jar!/com/android/volley/toolbox/ImageLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="620" selection-end="620" vertical-scroll-proportion="0.56777996" vertical-offset="0" max-vertical-offset="509">
+        <state line="21" column="65" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.28321677" vertical-offset="178" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/FadeInBitmapDrawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="58" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/util/ScalableImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="731" selection-end="731" vertical-scroll-proportion="0.30491802" vertical-offset="205" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/fragment/ImageListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="59" selection-start="6307" selection-end="6307" vertical-scroll-proportion="0.0" vertical-offset="2394" max-vertical-offset="3689">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviantArt/src/main/java/com/grantamos/android/deviantart/activity/ImageDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="21" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.6516854" vertical-offset="1420" max-vertical-offset="2414">
+        <state line="92" column="10" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.49836066" vertical-offset="869" max-vertical-offset="2465">
           <folding />
         </state>
       </provider>

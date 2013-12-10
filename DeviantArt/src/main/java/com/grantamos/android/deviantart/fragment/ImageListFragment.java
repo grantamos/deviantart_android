@@ -195,33 +195,44 @@ public class ImageListFragment extends ListFragment {
 
             viewHolder.imageView.imageHeight = image.thumb.height;
             viewHolder.imageView.imageWidth = image.thumb.width;
-            viewHolder.url = image.thumb.url;
+            viewHolder.image = image;
             viewHolder.username.setText(image.user.username);
             viewHolder.title.setText(image.title);
 
             if(viewHolder.imageContainer != null)
                 viewHolder.imageContainer.cancelRequest();
 
-            viewHolder.imageContainer = mImageLoader.get(viewHolder.url, getImageListener(viewHolder.imageView, 0, 0));
+            viewHolder.imageContainer = mImageLoader.get(viewHolder.image.thumb.url, getImageListener(viewHolder, 0, 0));
 
             return row;
         }
 
-        public ImageListener getImageListener(final ScalableImageView view, final int defaultImageResId, final int errorImageResId){
+        public ImageListener getImageListener(final ViewHolder viewHolder, final int defaultImageResId, final int errorImageResId){
             return new ImageListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     if (errorImageResId != 0) {
-                        view.setImageResource(errorImageResId);
+                        viewHolder.imageView.setImageResource(errorImageResId);
                     }
                 }
 
                 @Override
                 public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
                     if (response.getBitmap() != null) {
-                        view.setImageBitmap(response.getBitmap(), isImmediate ? 0 : 500);
+                        String url = viewHolder.image.image.url;
+
+                        if(url != null && url != response.getRequestUrl()){
+                            viewHolder.imageView.setImageBitmap(response.getBitmap(), isImmediate ? 0 : 500);
+                            viewHolder.imageContainer = mImageLoader.get(viewHolder.image.image.url, getImageListener(viewHolder, 0, 0));
+                        }
+                        else if(url != null){
+                            viewHolder.imageView.setImageBitmap(response.getBitmap(), 0);
+                        }else{
+                            viewHolder.imageView.setImageBitmap(response.getBitmap(), isImmediate ? 0 : 500);
+                        }
+
                     } else if (defaultImageResId != 0) {
-                        view.setImageResource(defaultImageResId);
+                        viewHolder.imageView.setImageResource(defaultImageResId);
                     }
                 }
             };
@@ -229,7 +240,7 @@ public class ImageListFragment extends ListFragment {
 
         class ViewHolder {
             ScalableImageView imageView;
-            String url;
+            Image image;
             TextView title, username;
             ImageLoader.ImageContainer imageContainer;
         }

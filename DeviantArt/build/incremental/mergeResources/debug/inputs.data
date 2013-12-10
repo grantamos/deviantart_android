@@ -2,6 +2,7 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1386343180463 466 29b51915f763d9865e9a33e8958fd2d41ba2fd37 C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\res\drawable-mdpi\abc_ic_ab_back_holo_dark.png
+1386634112648 7627 bf866fe9ad1188d2ec88019e157d199eea4cbc29 C:\Users\granta\Developer\github\deviantart_android\DeviantArt\src\main\res\drawable\user_icon_placeholder.png
 1386343180704 1324 6049bb927d78d002a4b67f7c3c9b37598208b90a C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\res\layout\abc_list_menu_item_icon.xml
 1386343180591 1983 b774d2523284d0a8858371206ca7cabdab421be9 C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\res\drawable-xhdpi\abc_ic_go.png
 1386343180569 152 34e90a35fdc683f086a153e5741fa1fe0aa3e7bf C:\Users\granta\Developer\github\deviantart_android\DeviantArt\build\exploded-bundles\ComAndroidSupportAppcompatV71800.aar\res\drawable-xhdpi\abc_ab_stacked_transparent_light_holo.9.png

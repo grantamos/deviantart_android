@@ -26,6 +26,8 @@ public class FadeInBitmapDrawable extends BitmapDrawable {
      */
     private static final int TRANSITION_NONE = 2;
 
+    private static final int TRANSITION_DONE = 3;
+
     /**
      * The current state of the transition. One of {@link #TRANSITION_STARTING},
      * {@link #TRANSITION_RUNNING} and {@link #TRANSITION_NONE}
@@ -55,6 +57,12 @@ public class FadeInBitmapDrawable extends BitmapDrawable {
         mAlpha = 0;
         mDuration = durationMillis;
         mTransitionState = TRANSITION_STARTING;
+
+        if(durationMillis == 0){
+            mTransitionState = TRANSITION_DONE;
+            mAlpha = 255;
+        }
+
         invalidateSelf();
     }
 
@@ -76,7 +84,12 @@ public class FadeInBitmapDrawable extends BitmapDrawable {
                     done = normalized >= 1.0f;
                     normalized = Math.min(normalized, 1.0f);
                     mAlpha = (int) (mFrom  + (mTo - mFrom) * normalized);
+
+                    if(done)
+                        mTransitionState = TRANSITION_DONE;
                 }
+                break;
+            case TRANSITION_DONE:
                 break;
         }
 
